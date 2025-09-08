@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 const CompanyOverview = () => (
   <section className="relative py-10 md:py-20 px-4 lg:px-16 overflow-hidden">
 
-    <div className="mx-auto">
+    <div className="container mx-auto">
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}

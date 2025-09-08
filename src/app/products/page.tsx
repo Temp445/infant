@@ -9,7 +9,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaGear } from "react-icons/fa6";
 import { GiGears } from "react-icons/gi";
-import { useProduct } from "@/context/ProductContext";
+
 
 interface Product {
   _id: string;
@@ -116,7 +116,7 @@ const Products = () => {
         </div>
 
         <div className="py-20 px-6 lg:px-20">
-          <div className="mx-auto">
+          <div className="container mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
               {products.map((product, index) => (
                 <motion.div

@@ -44,11 +44,11 @@ const HeroSection = () => {
          transition={{duration: 0.8, ease: "easeIn", delay: 0.8}} 
          className='gap-5'
          >
-           <p className=" md:text-xl text-gray-800 max-w-2xl mb-5">
+           <p className="md:text-lg text-gray-800 max-w-2xl mb-5">
             Delivering precision-engineered components for brakes and engines trusted by leading OEMs and Tier-1 suppliers worldwide.
           </p>
 
-          <p className="md:text-xl text-gray-800 max-w-2xl">
+          <p className="md:text-lg text-gray-800 max-w-2xl">
             With advanced manufacturing capabilities and a strong focus on quality, we specialize in producing reliable components that power safety and efficiency in the automotive industry.
           </p>
          </motion.div>

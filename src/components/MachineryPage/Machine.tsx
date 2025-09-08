@@ -25,7 +25,7 @@ const machineryData = [
 
 const Machine = () => {
   return (
-    <section className="py-5 md:py-20">
+    <section className="py-5 md:py-20 container mx-auto">
       <h1 className="text-2xl md:text-4xl font-extrabold md:px-4 lg:px-12 mb-14 text-gray-900 text-center md:text-left">
         Our Machinery <span className="text-orange-600">Collection</span>
       </h1>

@@ -10,8 +10,8 @@ import image5 from "@/assets/Image5.jpg";
 const ShopFloor = () => {
   return (
     <section className="py-16 bg-orange-100">
-      
-      <div className=" mb-12 lg:px-10">
+      <div className="container mx-auto">
+           <div className=" mb-12 lg:px-10">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 text-center md:text-left">
           Shop <span className="text-orange-600">Floor</span>
         </h2>
@@ -65,6 +65,8 @@ const ShopFloor = () => {
           </div>
         </div>
       </div>
+      </div>
+   
     </section>
   );
 };

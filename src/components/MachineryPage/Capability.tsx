@@ -26,7 +26,7 @@ const Capability = () => {
   ];
 
   return (
-    <section className="py-16">
+    <section className="py-16 container mx-auto">
       <div className=" px-6 lg:px-12">
         <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-12 text-center xl:text-left">
           Our <span className="text-orange-600">Capabilities</span>

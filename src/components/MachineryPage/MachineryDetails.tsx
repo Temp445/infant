@@ -14,7 +14,7 @@ const MachineryDetails = () => {
   ];
 
   return (
-    <div className="py-12 px-4 lg:px-10">
+    <div className="py-12 px-4 lg:px-10 container mx-auto">
       <h2 className="text-2xl md:text-4xl font-extrabold text-center mb-10 text-gray-900 tracking-wide">
         Machinery <span className="text-orange-500">Details</span>
       </h2>
