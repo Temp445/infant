@@ -1,9 +1,9 @@
 'use client'
 
 import React, { useState } from 'react'
-import Image1 from "@/assets/Products/Service1.png"
-import Image2 from "@/assets/Products/Service2.png"
-import Image3 from "@/assets/Products/Service3.png"
+import Image1 from "@/assets/products/Service1.png"
+import Image2 from "@/assets/products/Service2.png"
+import Image3 from "@/assets/products/Service3.png"
 import Image from 'next/image'
 
 const Service = () => {
