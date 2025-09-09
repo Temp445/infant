@@ -2,6 +2,7 @@
 
 import { useEffect, useState, ChangeEvent } from 'react';
 import AdminProtectedRoute from '@/components/ProductedRoute';
+import Sidebar from '@/components/Sidebar';
 
 interface User {
   _id: string;
@@ -12,13 +13,11 @@ interface User {
 
 const Users = () => {
   const [users, setUsers] = useState<User[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        setIsLoading(true);
         const res = await fetch(`/api/users`);
         if (!res.ok) throw new Error('Failed to fetch users');
 
@@ -26,9 +25,7 @@ const Users = () => {
         setUsers(Array.isArray(json) ? json : json?.data || []);
       } catch (err: any) {
         setError(err.message || 'Unknown error');
-      } finally {
-        setIsLoading(false);
-      }
+      } 
     };
 
     fetchUsers();
@@ -53,22 +50,14 @@ const Users = () => {
     }
   };
 
-  if (isLoading)
-    return (
-             <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100">
-        <div className="flex flex-col items-center justify-center min-h-screen">
-          <div className="relative">
-            <div className="w-16 h-16 border-4 border-blue-200 border-t-orange-600 rounded-full animate-spin"></div>
-          </div>
-        </div>
-      </div>
-    );
 
   if (error) return <div className="text-red-500 p-4">{error}</div>;
 
   return (
     <AdminProtectedRoute>
-      <div className="p-6 container mx-auto 2xl:mt-5 min-h-screen 2xl:px-10">
+      <div className='flex  min-h-screen'>
+        <Sidebar/>
+        <div className="p-6 container mx-auto 2xl:mt-5 2xl:px-10">
         <h1 className="text-2xl font-bold mb-6 text-gray-800">Users List</h1>
 
         <table className="min-w-full border rounded-lg overflow-hidden shadow-md">
@@ -118,6 +107,7 @@ const Users = () => {
             )}
           </tbody>
         </table>
+      </div>
       </div>
     </AdminProtectedRoute>
   );

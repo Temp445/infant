@@ -96,7 +96,7 @@ const Service = () => {
             <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">{selectedService.title}</h3>
             <p className="text-gray-600 mb-6 leading-relaxed">{selectedService.des}</p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 text-center">
               <Link href="/contact" className="flex-1 px-6 py-3 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-600 hover:text-white transition-colors font-semibold">
                 Contact Us
               </Link>

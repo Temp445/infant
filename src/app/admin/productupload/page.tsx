@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import Sidebar from "@/components/Sidebar";
 
 const ProductUpload = () => {
   const [productName, setProductName] = useState("");
@@ -47,7 +48,9 @@ const ProductUpload = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="flex bg-gray-50 min-h-screen">
+      <Sidebar/>
+      <div className="flex-1 flex mt-[10vh] h-fit justify-center">
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-lg p-6 bg-white border border-orange-300 shadow-lg rounded-xl space-y-6"
@@ -105,6 +108,7 @@ const ProductUpload = () => {
           {loading ? "Uploading..." : "Upload Product"}
         </button>
       </form>
+    </div>
     </div>
   );
 };
