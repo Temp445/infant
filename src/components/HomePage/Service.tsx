@@ -5,6 +5,7 @@ import Image1 from "@/assets/products/Service1.png"
 import Image2 from "@/assets/products/Service2.png"
 import Image3 from "@/assets/products/Service3.png"
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Service = () => {
   const services = [
@@ -96,12 +97,12 @@ const Service = () => {
             <p className="text-gray-600 mb-6 leading-relaxed">{selectedService.des}</p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="flex-1 px-6 py-3 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-600 hover:text-white transition-colors font-semibold">
+              <Link href="/contact" className="flex-1 px-6 py-3 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-600 hover:text-white transition-colors font-semibold">
                 Contact Us
-              </button>
-              <button className="flex-1 px-6 py-3 bg-orange-100 text-orange-700 rounded-lg hover:bg-orange-200 transition-colors font-semibold">
+              </Link>
+              <Link href="/products" className="flex-1 px-6 py-3 bg-orange-100 text-orange-700 rounded-lg hover:bg-orange-200 transition-colors font-semibold">
                 Our Products
-              </button>
+              </Link>
             </div>
 
             <button 

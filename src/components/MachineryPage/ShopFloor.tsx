@@ -13,7 +13,7 @@ const ShopFloor = () => {
       <div className="container mx-auto">
            <div className=" mb-12 lg:px-10">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 text-center md:text-left">
-          Shop <span className="text-orange-600">Floor</span>
+          Shop <span className="text-transparent bg-clip-text bg-gradient-to-br from-orange-500 to-red-500">Floor</span>
         </h2>
       </div>
 

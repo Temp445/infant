@@ -48,7 +48,7 @@ const DemoCard = () => {
             </Link>
 
             <Link
-              href="/product"
+              href="/products"
               className="relative px-5 py-2 md:px-10 md:py-4 rounded-full font-semibold text-orange-600 border-2 border-orange-500 overflow-hidden group transition"
             >
               <span className="relative z-10 transition">Our Products</span>

@@ -150,19 +150,6 @@ export default function Navbar() {
           <Disclosure.Panel className="lg:hidden bg-white shadow-lg border-t border-gray-200 transition-all duration-300">
             <div className="space-y-1 px-4 pt-2 pb-4">
             
-              <div className="flex items-center space-x-3 px-3 py-3 border-b border-gray-100 mb-2">
-                <Image 
-                  src={logo} 
-                  alt="Company Logo" 
-                  className="h-10 w-10 object-contain" 
-                />
-                <div>
-                  <span className="text-gray-900 font-bold text-base tracking-wide">
-                    Infant Engineers Pvt. Ltd
-                  </span>
-                </div>
-              </div>
-
               {navigation.map((item) => {
                 const isActive = pathname === item.href
                 return item.onClick ? (

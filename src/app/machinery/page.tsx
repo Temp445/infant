@@ -14,9 +14,9 @@ const Machinery = () => {
       <Navbar/>
       <HeroSection/>
       <Capability/>
+      <MachineryDetails/>
       <Machine/>
       <ShopFloor/>
-      <MachineryDetails/>
       <ContactSection/>
       <Footer/>
     </div>

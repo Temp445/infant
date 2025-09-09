@@ -68,7 +68,7 @@ const Users = () => {
 
   return (
     <AdminProtectedRoute>
-      <div className="p-6 container mx-auto 2xl:mt-5 pb-20 2xl:px-10">
+      <div className="p-6 container mx-auto 2xl:mt-5 min-h-screen 2xl:px-10">
         <h1 className="text-2xl font-bold mb-6 text-gray-800">Users List</h1>
 
         <table className="min-w-full border rounded-lg overflow-hidden shadow-md">

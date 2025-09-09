@@ -18,7 +18,7 @@ const Machinery = () => {
 
   return (
     <section className="py-16 px-6 lg:px-16 container mx-auto relative">
-      <h2 className="text-3xl font-extrabold mb-12">Our <span className='text-transparent bg-clip-text bg-gradient-to-br from-orange-500 to-red-500'>Machinery</span> </h2>
+      <h2 className="text-3xl font-extrabold mb-12">Machinery <span className='text-transparent bg-clip-text bg-gradient-to-br from-orange-500 to-red-500'>We Use</span> </h2>
       <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
         {Details.map((Detail, idx) => (
           <motion.div key={idx} className="bg-white rounded-lg border border-orange-200 shadow-lg p-6 text-center" whileHover={{ y: -5 }}>

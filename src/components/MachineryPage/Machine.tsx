@@ -27,7 +27,7 @@ const Machine = () => {
   return (
     <section className="py-5 md:py-20 container mx-auto">
       <h1 className="text-2xl md:text-4xl font-extrabold md:px-4 lg:px-12 mb-14 text-gray-900 text-center md:text-left">
-        Our Machinery <span className="text-orange-600">Collection</span>
+      Machinery <span className="text-transparent bg-clip-text bg-gradient-to-br from-orange-500 to-red-500">We Use</span>
       </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:px-12 mx-auto px-6">

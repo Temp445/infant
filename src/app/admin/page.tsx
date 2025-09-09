@@ -90,7 +90,7 @@ const Products = () => {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5 0H21v-1a6 6 0 00-9-5.197" />
                 </svg>
-                Manage Users
+                Users
               </button>
             </div>
           </div>
@@ -113,7 +113,7 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100">
-      <div className=" lg:px-16 mx-auto px-6 py-16">
+      <div className=" lg:px-16 mx-auto px-6 py-16 container">
         <div className="flex flex-col sm:flex-row justify-between items-center mb-12 gap-6">
           <div>
             <h1 className="text-2xl md:text-4xl font-bold text-gray-800 text-center sm:text-left">

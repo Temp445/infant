@@ -30,10 +30,6 @@ const Clients = () => {
       <div className="container mx-auto px-6 relative z-10">
        
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 text-sm font-semibold text-orange-700 bg-white rounded-full shadow-sm mb-4">
-            Trusted by Industry Leaders
-          </span>
-
           <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-4">
             Our{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
@@ -41,9 +37,8 @@ const Clients = () => {
             </span>
           </h2>
 
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto text-justify">
-            Partnering with forward-thinking companies worldwide, we deliver
-            solutions that drive innovation, performance, and long-term trust.
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto text-justify md:text-center">
+            Partnering with forward-thinking companies, we deliver solutions that drive innovation, performance, and long-term trust.
           </p>
         </div>
 

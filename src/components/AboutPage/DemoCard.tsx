@@ -46,7 +46,7 @@ const DemoCard = () => {
           </Link>
 
           <Link
-            href="/product"
+            href="/products"
             className=" px-5 py-2 md:px-10  md:py-4 rounded md:rounded-xl font-semibold border border-gray-300 text-gray-700 hover:border-orange-600 hover:text-orange-600 transition"
           >
             Explore Products

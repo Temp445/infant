@@ -7,6 +7,7 @@ import Image1 from '@/assets/Image2.png'
 import Image2 from '@/assets/Image4.jpg'
 import Image3 from '@/assets/Image3.jpg'
 import { FaGear } from "react-icons/fa6";
+import Link from 'next/link'
 
 
 const HeroSection = () => {
@@ -88,18 +89,12 @@ const HeroSection = () => {
       whileInView={{y:0 , opacity:1}}
       transition={{duration: 0.8 , ease:'easeInOut'}}
       className="flex flex-row gap-4 justify-center lg:justify-start mt-8 lg:mt-12">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              className="px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-orange-500 to-red-500 rounded-xl shadow-lg"
-            >
-              Contact Us
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              className="px-6 py-3 text-lg font-semibold border border-gray-800 text-gray-800 rounded-xl shadow"
-            >
-              Our Products
-            </motion.button>
+         <Link href="/contact" className="px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-orange-500 to-red-500 rounded-xl shadow-lg">
+           Contact Us
+         </Link>
+         <Link href="/products" className="px-6 py-3 text-lg font-semibold border border-gray-800 text-gray-800 rounded-xl shadow">
+           Our Products
+         </Link>
           </motion.div>
         </motion.div>
 

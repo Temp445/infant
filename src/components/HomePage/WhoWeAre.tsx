@@ -4,8 +4,9 @@ import React from "react";
 import { FaIndustry, FaTools, FaUsers } from "react-icons/fa";
 import { MdDoubleArrow } from "react-icons/md";
 import { motion } from "framer-motion";
-
+import { useRouter } from "next/navigation";
 const WhoWeAre = () => {
+  const router = useRouter()
   const features = [
     {
       icon: FaIndustry,
@@ -62,6 +63,7 @@ const WhoWeAre = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             whileHover={{ scale: 1.05 }}
+            onClick={()=> router.push('/about')}
           >
             Learn More
           </motion.button>
