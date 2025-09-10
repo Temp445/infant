@@ -134,14 +134,14 @@ const ProductSection = () => {
       </div>
 
       <div className="text-center mt-10 flex ">
-        <div className="group relative inline-flex items-center gap-2 md:gap-6 bg-transparent border border-black pl-4 pr-2 md:pl-6 md:py-3  py-2 rounded-full mx-auto  tracking-wider overflow-hidden">
+        <div className="group relative inline-flex items-center gap-2 md:gap-6 bg-transparent border border-black pl-4 pr-2 md:pl-6 py-3  rounded-full mx-auto  tracking-wider overflow-hidden">
           <span className="relative z-10 text-black transition-colors duration-300">
             Discover All Products
           </span>
           <div className="text-center">
             <Link
               href="/products"
-              className=" px-2  md:px-4 py-2 md:py-3 bg-orange-600 text-white rounded-full  transition-colors duration-300"
+              className=" px-2  md:px-4 py-3 bg-orange-600 text-white rounded-full  transition-colors duration-300"
             >
               View More
             </Link>

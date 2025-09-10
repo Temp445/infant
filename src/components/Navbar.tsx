@@ -147,39 +147,39 @@ export default function Navbar() {
           </div>
 
           {/* Mobile*/}
-          <Disclosure.Panel className="lg:hidden bg-white shadow-lg border-t border-gray-200 transition-all duration-300">
-            <div className="space-y-1 px-4 pt-2 pb-4">
-            
-              {navigation.map((item) => {
-                const isActive = pathname === item.href
-                return item.onClick ? (
-                  <button
-                    key={item.name}
-                    onClick={item.onClick}
-                    className={classNames(
-                      'block w-full text-left rounded-lg px-4 py-3 text-base font-medium transition-all duration-200',
-                      'text-gray-700 hover:text-orange-600 hover:bg-orange-50'
-                    )}
-                  >
-                    {item.name}
-                  </button>
-                ) : (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className={classNames(
-                      'block rounded-lg px-4 py-3 text-base font-medium transition-all duration-200',
-                      isActive 
-                        ? 'text-orange-600 font-semibold bg-orange-50 border-l-4 border-orange-600' 
-                        : 'text-gray-700 hover:text-orange-600 hover:bg-orange-50'
-                    )}
-                  >
-                    {item.name}
-                  </Link>
-                )
-              })}
-            </div>
-          </Disclosure.Panel>
+         <Disclosure.Panel className="absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-200 z-10 transition-all duration-300">
+  <div className="space-y-1 px-4 pt-2 pb-4">
+    {navigation.map((item) => {
+      const isActive = pathname === item.href
+      return item.onClick ? (
+        <button
+          key={item.name}
+          onClick={item.onClick}
+          className={classNames(
+            'block w-full text-left rounded-lg px-4 py-3 text-base font-medium transition-all duration-200',
+            'text-gray-700 hover:text-orange-600 hover:bg-orange-50'
+          )}
+        >
+          {item.name}
+        </button>
+      ) : (
+        <Link
+          key={item.name}
+          href={item.href}
+          className={classNames(
+            'block rounded-lg px-4 py-3 text-base font-medium transition-all duration-200',
+            isActive 
+              ? 'text-orange-600 font-semibold bg-orange-50 border-l-4 border-orange-600' 
+              : 'text-gray-700 hover:text-orange-600 hover:bg-orange-50'
+          )}
+        >
+          {item.name}
+        </Link>
+      )
+    })}
+  </div>
+</Disclosure.Panel>
+
         </>
       )}
     </Disclosure>
