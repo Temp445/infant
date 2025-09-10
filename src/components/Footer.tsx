@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Instagram , Linkedin, Youtube, Mail, Phone } from 'lucide-react';
+import { Facebook, Linkedin, Youtube, Mail, Phone } from 'lucide-react';
 import logo from "@/assets/Logo1.png"
 import Image from 'next/image'
 import { BsTwitterX } from "react-icons/bs";

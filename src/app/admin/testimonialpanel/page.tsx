@@ -43,11 +43,11 @@ const Testimonials = () => {
       <div className="flex-1 p-8">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-3xl font-bold text-gray-800">
-            Client Testimonials
+           Testimonials
           </h2>
           <button
             onClick={() => router.push("/admin/testimonialpanel/upload")}
-            className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-orange-600 transition"
+            className="flex items-center gap-2 text-orange-600 border px-4 py-2 rounded-lg shadow-md  transition"
           >
             <Plus className="w-5 h-5" /> Add Testimonial
           </button>

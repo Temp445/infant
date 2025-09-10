@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import Marquee from 'react-fast-marquee';
+import Marquee from "react-fast-marquee";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -33,16 +33,17 @@ const Clients = () => {
   return (
     <section className="relative py-20 bg-gradient-to-br from-orange-50 via-orange-100 to-orange-200">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-4">
-            Our{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
-              Clients
-            </span>
+        <div className="flex flex-col items-center mb-14">
+          <h2 className="text-sm font-semibold tracking-widest text-orange-600 uppercase flex items-center gap-2">
+            <span className="w-8 h-0.5 bg-orange-600"></span>
+            Trusted Clients
           </h2>
-
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto text-justify md:text-center">
-            Partnering with forward-thinking companies, we deliver solutions that drive innovation, performance, and long-term trust.
+          <h3 className="mt-4 text-3xl md:text-4xl font-bold text-gray-900 text-center">
+            Clients We Work With
+          </h3>
+          <p className="mt-4 text-gray-600 text-lg max-w-2xl text-center">
+            From startups to enterprises, we partner with organizations of all
+            sizes to help them achieve their goals.
           </p>
         </div>
 

@@ -49,7 +49,7 @@ const Clients = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-gray-50 container mx-auto">
       <Sidebar />
       <div className="flex-1 px-6 lg:px-16 py-12">
 
@@ -59,7 +59,7 @@ const Clients = () => {
           </h1>
           <button
             onClick={() => router.push("/admin/clientpanel/clientupload")}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-orange-600 text-white rounded-full font-semibold shadow-md hover:bg-orange-700 hover:shadow-lg transition-transform transform hover:-translate-y-1"
+            className="inline-flex items-center gap-2 px-6 py-3 text-orange-600 border rounded font-semibold shadow-md hover:shadow-lg transition-transform transform hover:-translate-y-1"
           >
             Add New Client
           </button>
@@ -84,17 +84,19 @@ const Clients = () => {
                 className="bg-white rounded shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2 overflow-hidden"
               >
                 
-                <div className="bg-orange-600 px-4 py-3">
-                  <h3 className="text-white font-semibold text-lg text-center line-clamp-2">
-                    {client.clientName}
-                  </h3>
-                </div>
+             
                 <div className="p-4 flex justify-center items-center bg-gray-50">
                   <img
                     src={client.clientImage[0]}
                     alt={client.clientName}
                     className="w-full h-48 object-contain rounded-md"
                   />
+                </div>
+
+                   <div className="px-4 py-3">
+                  <h3 className="text-black font-semibold text-base  line-clamp-2">
+                    {client.clientName}
+                  </h3>
                 </div>
 
                 <div className="flex divide-x divide-gray-200">

@@ -1,38 +1,36 @@
-'use client'
+"use client";
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import Team from '@/assets/Team/TeamPic.png';
-import Rajasekaran from '@/assets/Team/Rajasekaran.png';
-import Rajagopalan from '@/assets/Team/Rajagopalan.png';
+import Image from "next/image";
+import { motion } from "framer-motion";
+import Team from "@/assets/Team/TeamPic.png";
+import Rajasekaran from "@/assets/Team/Rajasekaran.png";
+import Rajagopalan from "@/assets/Team/Rajagopalan.png";
 import { MdVerified } from "react-icons/md";
-
 
 const leadershipTeam = [
   {
-    name: 'R. Rajagopalan',
-    position: 'Chairman',
+    name: "R. Rajagopalan",
+    position: "Chairman",
     image: Rajagopalan,
-    years: '40+',
-    specialty: 'Industrial Engineering',
+    years: "40+",
+    specialty: "Industrial Engineering",
     description:
-      'Founder & Chairman of Infant Engineers Private Limited is a Diploma Holder with over 40 years experience in Automobile Industry in Industrial Engineering, Production Planning, Shop Floor Systems and Materials Management, providing strategic inputs for the organizational growth.',
+      "Founder & Chairman of Infant Engineers Private Limited is a Diploma Holder with over 40 years experience in Automobile Industry in Industrial Engineering, Production Planning, Shop Floor Systems and Materials Management, providing strategic inputs for the organizational growth.",
   },
   {
-    name: 'S. Rajasekaran',
-    position: 'Managing Director',
+    name: "S. Rajasekaran",
+    position: "Managing Director",
     image: Rajasekaran,
-    years: '30+',
-    specialty: 'Materials Management',
+    years: "30+",
+    specialty: "Materials Management",
     description:
-      'Managing Director of Infant Engineers Private Limited is an MBA Graduate with over 30 years experience in Materials Management & System Design and Finance. He leads the day-to-day functions on a strategic level with his domain expertise.',
+      "Managing Director of Infant Engineers Private Limited is an MBA Graduate with over 30 years experience in Materials Management & System Design and Finance. He leads the day-to-day functions on a strategic level with his domain expertise.",
   },
 ];
 
 const TeamSection = () => {
   return (
     <section className="relative min-h-screen bg-gradient-to-b from-orange-100 to-orange-200 overflow-hidden">
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-10 xl:py-24">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -41,15 +39,17 @@ const TeamSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-10 md:mb-20"
         >
-    <h3 className="text-2xl md:text-3xl font-black mb-6 text-center mx-auto leading-tight">
-  <span className=" text-black">Leadership </span>
-  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
-     Excellence
-  </span>
-</h3>
+          <h3 className="text-2xl md:text-3xl font-black mb-6 text-center mx-auto leading-tight">
+            <span className=" text-black">Leadership </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
+              Excellence
+            </span>
+          </h3>
 
           <p className="text-gray-700 md:text-xl max-w-3xl mx-auto leading-relaxed">
-   Combined expertise delivering excellence and innovation in automotive engineering.          </p>
+            Combined expertise delivering excellence and innovation in
+            automotive engineering.{" "}
+          </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8 mb-20">
@@ -66,16 +66,24 @@ const TeamSection = () => {
                 <div className="flex justify-between items-center mb-8">
                   <div className="flex gap-4 items-center justify-center">
                     <div className="text-center">
-                      <div className="text-2xl md:text-3xl font-black text-orange-500">{leader.years}</div>
-                      <div className="text-xs text-gray-400 uppercase tracking-wider">Years Exp.</div>
+                      <div className="text-2xl md:text-3xl font-black text-orange-500">
+                        {leader.years}
+                      </div>
+                      <div className="text-xs text-gray-400 uppercase tracking-wider">
+                        Years Exp.
+                      </div>
                     </div>
                     <div className="w-px h-12 bg-gradient-to-b from-orange-500/50 to-red-500/50"></div>
                     <div className="text-center">
-                      <div className="text-lg font-bold text-gray-800">{leader.position}</div>
+                      <div className="text-lg font-bold text-gray-800">
+                        {leader.position}
+                      </div>
                     </div>
                   </div>
                   <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500/20 to-red-500/20 md:flex items-center justify-center hidden">
-                    <div className="text-3xl text-orange-600"><MdVerified/> </div>
+                    <div className="text-3xl text-orange-600">
+                      <MdVerified />{" "}
+                    </div>
                   </div>
                 </div>
 
@@ -89,7 +97,6 @@ const TeamSection = () => {
                         height={300}
                         className=" w-full h-52 md:h-80 object-contain md:object-cover group-hover:scale-110 transition-transform duration-700 rounded"
                       />
-                      {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div> */}
                     </div>
                   </div>
 
@@ -100,7 +107,7 @@ const TeamSection = () => {
                       </h3>
                       <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
                     </div>
-                    
+
                     <p className="text-gray-700 leading-relaxed text-sm">
                       {leader.description}
                     </p>
@@ -120,13 +127,15 @@ const TeamSection = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">
-              Complete <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">Leadership Team</span>
+              Complete{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
+                Leadership Team
+              </span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full"></div>
           </div>
 
           <div className="relative group cursor-pointer">
-           
             <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl overflow-hidden backdrop-blur-xl border border-gray-700/50">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-red-500/10 to-orange-500/10"></div>
               <Image
@@ -134,11 +143,9 @@ const TeamSection = () => {
                 alt="Complete Leadership Team"
                 className="relative w-full h-auto group-hover:scale-105 transition-transform duration-700"
               />
-              
             </div>
           </div>
         </motion.div>
-
       </div>
     </section>
   );

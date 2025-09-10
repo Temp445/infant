@@ -93,7 +93,7 @@ const ProductUpload = () => {
                   key={index}
                   src={url}
                   alt={`Preview ${index}`}
-                  className="w-full h-24  rounded-lg border"
+                  className="w-full h-24 object-contain rounded-lg border"
                 />
               ))}
             </div>

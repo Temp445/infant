@@ -10,7 +10,6 @@ const HeroSection = () => {
   return (
     <section className="relative w-full bg-gray-900">
 
-      {/* Hero Image */}
       <div className="relative w-full h-[500px] sm:h-[550px] lg:h-[600px]">
         <Image
           src={HeroImage}

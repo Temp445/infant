@@ -1,24 +1,49 @@
+'use client'
+
 import React from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-fit flex items-center justify-center bg-gradient-to-br from-orange-100 via-orange-200 to-orange-300 overflow-hidden">
-  
-      <div className="relative text-center max-w-3xl px-6 py-16 md:py-24">
-        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
-          Machines That Build{" "}
-          <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-         Our Products
+    <section className="relative w-full flex items-center justify-center bg-gradient-to-br from-orange-200 via-orange-300 to-red-200 overflow-hidden">
+
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="relative text-center md:max-w-4xl px-6 py-16 md:py-24"
+      >
+        <h1 className="text-2xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+          Powering Innovation With{" "}
+          <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            Advanced Machinery
           </span>
         </h1>
-        <p className="mt-6 md:text-lg text-gray-700 max-w-2xl mx-auto">
-          With advanced machinery, we deliver {" "}
+        <p className="mt-6 text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
+          We use state-of-the-art equipment to ensure{" "}
           <span className="font-semibold text-gray-900">
-            precision, quality, and efficiency 
+            precision, efficiency, and consistent quality
           </span>{" "}
-          at every stage of manufacturing.
+          in every product we manufacture.
         </p>
-      </div>
+
+  
+        <div className="mt-8 flex justify-center gap-4">
+          <Link
+            href="/products"
+            className="px-6 py-3 rounded-full border text-black hover:bg-white font-semibold shadow-lg hover:scale-105 transition"
+          >
+            Explore Our Products
+          </Link>
+          <Link
+            href="/contact"
+            className="px-6 py-3 rounded-full border-2 border-orange-500 text-orange-600 font-semibold hover:bg-orange-50 transition hidden md:block"
+          >
+            Contact Us
+          </Link>
+        </div>
+      </motion.div>
     </section>
   );
 };

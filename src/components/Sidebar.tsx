@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Package, Users, Quote, Building2, Menu, X } from "lucide-react";
+import { Package, Users, Quote, UserStar, Factory , Menu, X } from "lucide-react";
 
 const Sidebar = () => {
   const router = useRouter();
@@ -10,8 +10,9 @@ const Sidebar = () => {
 
   const navItems = [
     { label: "Products", icon: <Package className="w-5 h-5" />, href: "/admin" },
-    { label: "Clients", icon: <Building2 className="w-5 h-5" />, href: "/admin/clientpanel" },
+    { label: "Clients", icon: <UserStar className="w-5 h-5" />, href: "/admin/clientpanel" },
     { label: "Testimonials", icon: <Quote className="w-5 h-5" />, href: "/admin/testimonialpanel" },
+    { label: "Machinery", icon: <Factory className="w-5 h-5" />, href: "/admin/machinerypanel" },
     { label: "Users", icon: <Users className="w-5 h-5" />, href: "/admin/users" },
   ];
 
