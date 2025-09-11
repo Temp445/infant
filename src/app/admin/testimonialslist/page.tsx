@@ -7,6 +7,8 @@ import { useRouter } from "next/navigation";
 
 const TestimonialsList = () => {
   const [testimonials, setTestimonials] = useState<any[]>([]);
+    const [loading, setLoading] = useState(true);
+  
   const router = useRouter();
 
   useEffect(() => {
@@ -16,6 +18,8 @@ const TestimonialsList = () => {
         setTestimonials(res.data?.data || []);
       } catch (err) {
         console.error("Error fetching testimonials:", err);
+      } finally {
+        setLoading(false);
       }
     };
     fetchData();
@@ -48,8 +52,10 @@ const TestimonialsList = () => {
           </button>
         </div>
 
-        {testimonials.length === 0 ? (
-          <p className="text-gray-600">No testimonials available.</p>
+        {loading ? (
+          <div className="flex flex-col items-center justify-center min-h-[50vh]">
+            <div className="w-16 h-16 border-4 border-blue-200 border-t-orange-600 rounded-full animate-spin"></div>
+          </div>
         ) : (
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((t) => (
