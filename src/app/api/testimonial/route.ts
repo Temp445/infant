@@ -1,5 +1,6 @@
 import Mongoose from "@/lib/mongoose"
 import Testimonial from "@/models/Testimonial"
+import cloudinary from "@/lib/cloudinary"
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET() {
@@ -24,10 +25,27 @@ export async function POST(req: NextRequest) {
         if(!clientName || !clientRole) {
             return NextResponse.json({success:false , message: 'Client Name, Role are required' }, {status: 400})
         }
-
+            const clientLogo: string[] = [];
+              for (const file of formData.getAll("clientLogo")) {
+                if (file instanceof File) {
+                  const buffer = Buffer.from(await file.arrayBuffer());
+                  const upload = await new Promise<any>((resolve, reject) => {
+                    const stream = cloudinary.uploader.upload_stream(
+                      { folder: "clientLogo/main" },
+                      (error, result) => {
+                        if (error) reject(error);
+                        else resolve(result);
+                      }
+                    );
+                    stream.end(buffer);
+                  });
+                  clientLogo.push(upload.secure_url);
+                }
+              }
         const testimonial = new Testimonial({
             clientName,
             clientRole,
+            clientLogo,
             description
         })
         await testimonial.save();

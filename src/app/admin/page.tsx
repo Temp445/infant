@@ -114,7 +114,7 @@ const Admin = () => {
                       <div className="flex gap-3">
                         <button
                           onClick={() => router.push(`/admin/productupdate/${product._id}`)}
-                          className="flex-1 group/btn relative overflow-hidden bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 px-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
+                          className="flex-1 group/btn relative overflow-hidden border text-black py-3 px-4 rounded font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
                         >
                           <div className="absolute inset-0 bg-white/0 group-hover/btn:bg-white/20 transition-colors duration-300"></div>
                           <div className="relative flex items-center justify-center gap-2">
@@ -125,7 +125,7 @@ const Admin = () => {
                         
                         <button
                           onClick={() => handleDelete(product._id)}
-                          className="group/btn relative overflow-hidden bg-gradient-to-r from-rose-500 to-red-500 text-white py-3 px-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
+                          className="group/btn relative overflow-hidden bg-gradient-to-r from-rose-500 to-red-500 text-white py-3 px-4 rounded font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
                         >
                           <div className="absolute inset-0 bg-white/0 group-hover/btn:bg-white/20 transition-colors duration-300"></div>
                           <div className="relative flex items-center justify-center">

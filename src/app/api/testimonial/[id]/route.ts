@@ -1,30 +1,36 @@
-
 import Mongoose from "@/lib/mongoose";
 import Testimonial from "@/models/Testimonial";
 import { NextRequest, NextResponse } from "next/server";
-
+import cloudinary from "@/lib/cloudinary";
 
 export async function GET(req: NextRequest) {
-    try{
-        await Mongoose();
-           const url = new URL(req.url);
-            const pathname = url.pathname; 
-            const parts = pathname.split('/');
-            const id = parts[parts.length - 1];
-        
-            if (!id) {
-              return NextResponse.json({ success: false, message: "ID required" }, { status: 400 });
-            }
-        
-        const testimonial = await Testimonial.findById(id);
-        if (!testimonial){
-        return NextResponse.json({success: false, message: "testimonial not found"}, {status: 404})
-        }
+  try {
+    await Mongoose();
 
-        return NextResponse.json ({success: true, data: testimonial}, {status: 200})
+    const url = new URL(req.url);
+    const id = url.pathname.split("/").pop();
 
-    }catch (err: any) {
-    console.error("Fetch error:", err);
+    if (!id) {
+      return NextResponse.json(
+        { success: false, message: "ID is required" },
+        { status: 400 }
+      );
+    }
+
+    const testimonial = await Testimonial.findById(id);
+    if (!testimonial) {
+      return NextResponse.json(
+        { success: false, message: "Testimonial not found" },
+        { status: 404 }
+      );
+    }
+
+    return NextResponse.json(
+      { success: true, data: testimonial },
+      { status: 200 }
+    );
+  } catch (err: any) {
+    console.error("GET Error:", err);
     return NextResponse.json(
       { success: false, message: err.message || "Failed to fetch testimonial" },
       { status: 500 }
@@ -33,39 +39,69 @@ export async function GET(req: NextRequest) {
 }
 
 export async function PUT(req: NextRequest) {
-    try{
-        await Mongoose();
-        
-        const formData = await req.formData();
-        const url = new URL(req.url);
-        const parts = url.pathname.split("/");
-        const id = parts[parts.length - 1];
+  try {
+    await Mongoose();
 
-        const testimonial = await Testimonial.findById(id);
-        if (!testimonial) {
-          return NextResponse.json(
-            { success: false, message: "testimonial not found" },
-            { status: 404 }
-          );
-        }
-        
-        testimonial.clientName = (formData.get("clientName") as string) || testimonial.clientName;
-        testimonial.clientRole = (formData.get("clientRole") as string) || testimonial.clientRole;
-        testimonial.description = (formData.get("description") as string) || testimonial.description;
+    const url = new URL(req.url);
+    const id = url.pathname.split("/").pop();
 
-         await testimonial.save();
-        
-        return NextResponse.json({ success: true, data: testimonial }, { status: 200 });
+    if (!id) {
+      return NextResponse.json(
+        { success: false, message: "ID is required" },
+        { status: 400 }
+      );
+    }
 
-    } catch (err: any) {
-        console.error("Update error:", err);
-        return NextResponse.json(
-          { success: false, message: err.message || "Failed to update testimonial" },
-          { status: 500 }
-        );
+    const testimonial = await Testimonial.findById(id);
+    if (!testimonial) {
+      return NextResponse.json(
+        { success: false, message: "Testimonial not found" },
+        { status: 404 }
+      );
+    }
+
+    const formData = await req.formData();
+    testimonial.clientName =
+      (formData.get("clientName") as string) || testimonial.clientName;
+    testimonial.clientRole =
+      (formData.get("clientRole") as string) || testimonial.clientRole;
+    testimonial.description =
+      (formData.get("description") as string) || testimonial.description;
+
+    const uploadedLogos: string[] = [];
+    for (const file of formData.getAll("clientLogo")) {
+      if (file instanceof File) {
+        const buffer = Buffer.from(await file.arrayBuffer());
+        const upload: any = await new Promise((resolve, reject) => {
+          cloudinary.uploader
+            .upload_stream({ folder: "clientLogo/extra" }, (error, result) => {
+              if (error) reject(error);
+              else resolve(result);
+            })
+            .end(buffer);
+        });
+        uploadedLogos.push(upload.secure_url);
       }
-}
+    }
 
+    if (uploadedLogos.length > 0) {
+      testimonial.clientLogo = uploadedLogos;
+    }
+
+    await testimonial.save();
+
+    return NextResponse.json(
+      { success: true, data: testimonial },
+      { status: 200 }
+    );
+  } catch (err: any) {
+    console.error("PUT Error:", err);
+    return NextResponse.json(
+      { success: false, message: err.message || "Failed to update testimonial" },
+      { status: 500 }
+    );
+  }
+}
 
 
 export async function DELETE(req: NextRequest) {
@@ -73,8 +109,7 @@ export async function DELETE(req: NextRequest) {
     await Mongoose();
 
     const url = new URL(req.url);
-    const parts = url.pathname.split("/");
-    const id = parts[parts.length - 1];
+    const id = url.pathname.split("/").pop();
 
     if (!id) {
       return NextResponse.json(
@@ -96,10 +131,10 @@ export async function DELETE(req: NextRequest) {
       { success: true, message: "Testimonial deleted successfully" },
       { status: 200 }
     );
-  } catch (error: any) {
-    console.error("Delete error:", error);
+  } catch (err: any) {
+    console.error("DELETE Error:", err);
     return NextResponse.json(
-      { success: false, error: error.message || "Something went wrong" },
+      { success: false, message: err.message || "Failed to delete testimonial" },
       { status: 500 }
     );
   }

@@ -12,7 +12,7 @@ interface Client {
   clientImage: string[];
 }
 
-const Clients = () => {
+const ClientsList = () => {
   const router = useRouter();
   const [clients, setClients] = useState<Client[]>([]);
   const [loading, setLoading] = useState(true);
@@ -58,7 +58,7 @@ const Clients = () => {
             Clients
           </h1>
           <button
-            onClick={() => router.push("/admin/clientpanel/clientupload")}
+            onClick={() => router.push("/admin/clientslist/upload")}
             className="inline-flex items-center gap-2 px-6 py-3 text-orange-600 border rounded font-semibold shadow-md hover:shadow-lg transition-transform transform hover:-translate-y-1"
           >
             Add New Client
@@ -99,22 +99,29 @@ const Clients = () => {
                   </h3>
                 </div>
 
-                <div className="flex divide-x divide-gray-200">
-                  <button
-                    onClick={() =>
-                      router.push(`/admin/clientpanel/clientupdate/${client._id}`)
-                    }
-                    className="flex-1 flex items-center justify-center gap-2 py-3 bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
-                  >
-                    <PencilLine className="w-5 h-5" /> Edit
-                  </button>
-                  <button
-                    onClick={() => handleDelete(client._id)}
-                    className="flex-1 flex items-center justify-center gap-2 py-3 bg-red-600 text-white font-semibold hover:bg-red-700 transition"
-                  >
-                    <Trash2 className="w-5 h-5" /> Delete
-                  </button>
-                </div>
+              <div className="flex gap-3">
+                        <button
+                          onClick={() => router.push(`/admin/clientslist/update/${client._id}`) }
+
+                          className="flex-1 group/btn relative overflow-hidden border text-black py-3 px-4 rounded font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
+                        >
+                          <div className="absolute inset-0 bg-white/0 group-hover/btn:bg-white/20 transition-colors duration-300"></div>
+                          <div className="relative flex items-center justify-center gap-2">
+                            <PencilLine className="w-4 h-4 group-hover/btn:rotate-12 transition-transform duration-300" />
+                            <span className="text-sm">Edit</span>
+                          </div>
+                        </button>
+                        
+                        <button
+                          onClick={() => handleDelete(client._id)}
+                          className="group/btn relative overflow-hidden bg-gradient-to-r from-rose-500 to-red-500 text-white py-3 px-4 rounded font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
+                        >
+                          <div className="absolute inset-0 bg-white/0 group-hover/btn:bg-white/20 transition-colors duration-300"></div>
+                          <div className="relative flex items-center justify-center">
+                            <Trash2 className="w-4 h-4 group-hover/btn:scale-110 transition-transform duration-300" />
+                          </div>
+                        </button>
+                      </div>
               </div>
             ))}
           </div>
@@ -124,4 +131,4 @@ const Clients = () => {
   );
 };
 
-export default Clients;
+export default ClientsList;

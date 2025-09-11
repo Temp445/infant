@@ -42,7 +42,7 @@ const MachineryUpload = () => {
       });
 
       alert('Machinery uploaded successfully!');
-      router.push('/admin/machinerypanel');
+      router.push('/admin/machinerylist');
       setMachineryName('');
       setImages([]);
       setPreviewImages([]);
@@ -114,7 +114,7 @@ const MachineryUpload = () => {
                 disabled={loading}
                 className="bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition font-semibold shadow-md"
               >
-                {loading ? 'Uploading...' : 'Upload'}
+                {loading ? 'Uploading...' : 'Upload Machinery'}
               </button>
             </div>
           </form>

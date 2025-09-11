@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { useRouter, useParams } from 'next/navigation';
-import axios from 'axios';
-import Sidebar from '@/components/Sidebar';
+import React, { useState, useEffect } from "react";
+import { useRouter, useParams } from "next/navigation";
+import axios from "axios";
+import Sidebar from "@/components/Sidebar";
 
-const MachineryUpdate = () => {
+const ClientUpdate = () => {
   const router = useRouter();
   const { id } = useParams();
 
-  const [machineryName, setMachineryName] = useState('');
+  const [clientName, setClientName] = useState("");
   const [existingImages, setExistingImages] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -17,22 +17,22 @@ const MachineryUpdate = () => {
   const [newImages, setNewImages] = useState<File[]>([]);
 
   useEffect(() => {
-    const fetchMachinery = async () => {
+    const fetchClient = async () => {
       try {
-        const { data } = await axios.get(`/api/machinery/${id}`);
-        setMachineryName(data.machineryName);
-        setExistingImages(data.machineryImage);
+        const { data } = await axios.get(`/api/client/${id}`);
+        setClientName(data.clientName);
+        setExistingImages(data.clientImage);
       } catch (error) {
         console.error(error);
-        alert('Failed to fetch machinery');
+        alert("Failed to fetch client");
       }
     };
-    fetchMachinery();
+    fetchClient();
   }, [id]);
 
   const handleReplaceClick = (index: number) => {
     setReplaceIndex(index);
-    const fileInput = document.getElementById('replaceImageInput');
+    const fileInput = document.getElementById("replaceImageInput");
     fileInput?.click();
   };
 
@@ -42,11 +42,11 @@ const MachineryUpdate = () => {
       if (!file) return;
 
       const updatedExisting = [...existingImages];
-      updatedExisting[replaceIndex] = URL.createObjectURL(file);
+      updatedExisting[replaceIndex] = URL.createObjectURL(file); 
       setExistingImages(updatedExisting);
 
       const updatedNew = [...newImages];
-      updatedNew[replaceIndex] = file;
+      updatedNew[replaceIndex] = file; 
       setNewImages(updatedNew);
 
       setReplaceIndex(null);
@@ -55,27 +55,27 @@ const MachineryUpdate = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!machineryName) {
-      alert('Machinery name is required');
+    if (!clientName) {
+      alert("Client name is required");
       return;
     }
 
     try {
       setLoading(true);
       const formData = new FormData();
-      formData.append('machineryName', machineryName);
-      existingImages.forEach((img) => formData.append('existingImages', img));
-      newImages.forEach((file) => file && formData.append('machineryImage', file));
+      formData.append("clientName", clientName);
+      existingImages.forEach((img) => formData.append("existingImages", img));
+      newImages.forEach((file) => file && formData.append("clientImage", file));
 
-      await axios.put(`/api/machinery/${id}`, formData, {
-        headers: { 'Content-Type': 'multipart/form-data' },
+      await axios.put(`/api/client/${id}`, formData, {
+        headers: { "Content-Type": "multipart/form-data" },
       });
 
-      alert('Machinery updated successfully!');
-      router.push('/admin/machinerypanel');
+      alert("Client updated successfully!");
+      router.push("/admin/clientslist");
     } catch (error) {
       console.error(error);
-      alert('Failed to update machinery');
+      alert("Failed to update client");
     } finally {
       setLoading(false);
     }
@@ -90,32 +90,33 @@ const MachineryUpdate = () => {
           className="max-w-3xl mx-auto bg-white border border-orange-200 shadow-lg rounded-2xl p-8 space-y-8"
         >
           <h2 className="text-3xl font-bold text-gray-800 text-center">
-            Update Machinery
+            Update Client
           </h2>
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Machinery Name
+              Client Name
             </label>
             <input
               type="text"
-              value={machineryName}
-              onChange={(e) => setMachineryName(e.target.value)}
+              value={clientName}
+              onChange={(e) => setClientName(e.target.value)}
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-500 focus:outline-none"
-              placeholder="Enter machinery name"
+              placeholder="Enter client name"
               required
             />
           </div>
-          
+
+          {existingImages.length > 0 && (
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Machinery Image
+                Images
               </label>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                 {existingImages.map((img, idx) => (
                   <div
                     key={idx}
-                    className="relative group cursor-pointer rounded-lg overflow-hidden border transition"
+                    className="relative group cursor-pointer rounded-lg overflow-hidden border hover:ring-2 hover:ring-orange-500 transition"
                     onClick={() => handleReplaceClick(idx)}
                   >
                     <img
@@ -130,7 +131,7 @@ const MachineryUpdate = () => {
                 ))}
               </div>
             </div>
-          
+          )}
 
           <input
             id="replaceImageInput"
@@ -143,9 +144,9 @@ const MachineryUpdate = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-fit bg-orange-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-orange-700 transition"
+            className="w-full bg-orange-600 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 transition"
           >
-            {loading ? 'Updating...' : 'Update'}
+            {loading ? "Updating..." : "Update Client"}
           </button>
         </form>
       </div>
@@ -153,4 +154,4 @@ const MachineryUpdate = () => {
   );
 };
 
-export default MachineryUpdate;
+export default ClientUpdate;

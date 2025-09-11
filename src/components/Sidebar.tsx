@@ -10,9 +10,9 @@ const Sidebar = () => {
 
   const navItems = [
     { label: "Products", icon: <Package className="w-5 h-5" />, href: "/admin" },
-    { label: "Clients", icon: <UserStar className="w-5 h-5" />, href: "/admin/clientpanel" },
-    { label: "Testimonials", icon: <Quote className="w-5 h-5" />, href: "/admin/testimonialpanel" },
-    { label: "Machinery", icon: <Factory className="w-5 h-5" />, href: "/admin/machinerypanel" },
+    { label: "Clients", icon: <UserStar className="w-5 h-5" />, href: "/admin/clientslist" },
+    { label: "Testimonials", icon: <Quote className="w-5 h-5" />, href: "/admin/testimonialslist" },
+    { label: "Machinery", icon: <Factory className="w-5 h-5" />, href: "/admin/machinerylist" },
     { label: "Users", icon: <Users className="w-5 h-5" />, href: "/admin/users" },
   ];
 
@@ -20,7 +20,7 @@ const Sidebar = () => {
     <>
       {/* Desktop*/}
       <aside className="hidden md:block w-64 bg-white shadow-lg p-6">
-        <h2 className="text-2xl font-bold text-orange-600 mb-8">Admin</h2>
+        <h2 className="text-2xl font-bold text-orange-600 mb-8">Admin Panel</h2>
         <nav className="space-y-4">
           {navItems.map((item) => (
             <button

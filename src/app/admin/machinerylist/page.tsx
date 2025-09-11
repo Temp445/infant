@@ -12,7 +12,7 @@ interface Machinery {
   machineryImage: string[];
 }
 
-const MachineryPage = () => {
+const MachineryList = () => {
   const router = useRouter();
   const [machinery, setmachinery] = useState<Machinery[]>([]);
   const [loading, setLoading] = useState(true);
@@ -60,8 +60,8 @@ const MachineryPage = () => {
           <div className="flex justify-between items-center mb-12">
             <h1 className="text-3xl md:text-4xl font-bold mb-2">Machinery</h1>
             <button
-              onClick={() => router.push('/admin/machinerypanel/upload')}
-              className="group relative border text-orange-600 px-8 py-2 rounded shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+              onClick={() => router.push('/admin/machinerylist/upload')}
+              className="group relative border text-orange-600 px-8 py-2 font-bold rounded shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 overflow-hidden"
             >
               <span className="relative flex items-center gap-2">Add New Machinery</span>
             </button>
@@ -106,7 +106,7 @@ const MachineryPage = () => {
                       <div className="flex gap-3">
                         <button
                           onClick={() =>
-                            router.push(`/admin/machinerypanel/update/${machinery._id}`)
+                            router.push(`/admin/machinerylist/update/${machinery._id}`)
                           }
                           className="flex-1 group/btn relative overflow-hidden border  text-black py-3 px-4 rounded font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
                         >
@@ -139,4 +139,4 @@ const MachineryPage = () => {
   );
 };
 
-export default MachineryPage;
+export default MachineryList;

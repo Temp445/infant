@@ -7,6 +7,7 @@ import axios from 'axios';
 
 interface Testimonial {
   _id: string;
+  clientLogo: string[];
   clientName: string;
   clientRole: string;
   description: string;
@@ -69,12 +70,19 @@ const Testimonial = () => {
               <p className="text-gray-700 text-lg md:text-xl italic mb-6">
                 {currentTestimonial.description}
               </p>
-              <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
+             <div className='flex gap-5 justify-center'>
+              {currentTestimonial.clientLogo?.length > 0 && (
+              <img src={currentTestimonial.clientLogo[0]} alt={currentTestimonial.clientName}  className="w-fit h-12 rounded-full shadow-md" />
+              )}
+              <div>
+                 <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
                 {currentTestimonial.clientName}
               </h3>
               <p className="text-sm md:text-base text-gray-500">
                 {currentTestimonial.clientRole}
               </p>
+              </div>
+             </div>
             </motion.div>
           </AnimatePresence>
         </div>

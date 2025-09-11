@@ -38,7 +38,7 @@ const ClientUpload = () => {
       });
 
       alert("Client uploaded successfully!");
-      router.push("/admin/clientpanel");
+      router.push("/admin/clientslist");
     } catch (error) {
       console.error(error);
       alert("Upload failed. Please try again.");
