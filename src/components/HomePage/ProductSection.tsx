@@ -111,12 +111,12 @@ const ProductSection = () => {
             whileTap={{ scale: 0.95 }}
           >
             <div
-              className="absolute top-3 right-4 text-3xl font-black text-transparent"
+              className="absolute z-10 top-3 right-4 text-3xl font-black text-transparent"
               style={{ WebkitTextStroke: "2px rgba(194,65,12,0.6)" }}
             >
               #0{idx + 1}
             </div>
-            <div className="w-40 h-40 relative mb-6">
+            <div className="w-46 h-46 relative mb-6">
               <img
                 src={product.productImage[0]}
                 alt={product.productName}

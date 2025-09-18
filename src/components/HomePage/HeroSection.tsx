@@ -38,22 +38,25 @@ const HeroSection = () => {
             </h1>
           </motion.div>
           <motion.div initial={{ z: -50, opacity: 0 }}></motion.div>
-          <motion.div
+          <motion.div  className="gap-5">
+            <motion.p
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeIn", delay: 0.8 }}
-            className="gap-5"
-          >
-            <p className="md:text-lg text-gray-800 max-w-2xl mb-5">
+            transition={{ duration: 0.8, ease: "easeIn"}}
+             className="md:text-lg text-gray-800 max-w-2xl mb-5">
               Delivering precision-engineered components for brakes and engines
               trusted by leading OEMs and Tier-1 suppliers worldwide.
-            </p>
+            </motion.p>
 
-            <p className="md:text-lg text-gray-800 max-w-2xl">
+            <motion.p 
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeIn", delay: 0.2 }}
+            className="md:text-lg text-gray-800 max-w-2xl">
               With advanced manufacturing capabilities and a strong focus on
               quality, we specialize in producing reliable components that power
               safety and efficiency in the automotive industry.
-            </p>
+            </motion.p>
           </motion.div>
 
           <motion.div

@@ -70,7 +70,7 @@ export default function Navbar() {
     items.push(
       isAuthenticated
         ? { name: 'Logout', href: '#', onClick: handleLogout }
-        : { name: 'Login', href: '/login' }
+        : { name: 'Site Admin', href: '/login' }
     )
 
     return items

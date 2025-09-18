@@ -40,7 +40,7 @@ const whyChooseUs = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="relative bg-white py-5 md:py-24 px-6 2xl:px-16 container mx-auto">
+    <section className="relative bg-white py-5 md:py-10 px-6 2xl:px-16 container mx-auto">
       <div className=" mb-16">
         <motion.h2
         initial={{x:-50 , opacity:0}} 
