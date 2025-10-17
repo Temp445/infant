@@ -7,16 +7,14 @@ export const metadata: Metadata = {
   title: 'Products | Infant Engineers Pvt Ltd',
   description: 'Explore our wide range of precision-engineered automotive components designed with advanced technology, strict quality standards, and OEM expertise to meet global industry needs',
 
-  metadataBase: new URL(domainUrl),
-
   openGraph: {
     title: 'Products | Infant Engineers Pvt Ltd',
     description: 'Explore our wide range of precision-engineered automotive components designed with advanced technology, strict quality standards, and OEM expertise to meet global industry needs',
-    url: '/contact',
+    url: `${domainUrl}/products`,
     siteName: 'Infant Engineers Pvt Ltd',
     images: [
       {
-        url: '/og-images/Logo.png', 
+        url: `${domainUrl}/og-images/Logo.png`, 
         width: 1200,
         height: 630,
         alt: 'Infant Engineers Pvt Ltd',

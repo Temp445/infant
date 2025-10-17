@@ -1,8 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Sidebar from "@/components/Sidebar";
-import { Quote, Pencil, Trash2, Plus } from "lucide-react";
+import { Quote, Pencil, Trash2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 const TestimonialsList = () => {
@@ -39,7 +38,6 @@ const TestimonialsList = () => {
 
   return (
     <div className="flex min-h-screen bg-gray-100">
-      <Sidebar />
 
       <div className="flex-1 p-8">
         <div className="flex items-center justify-between mb-8">

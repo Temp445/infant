@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Team from "@/assets/Team/TeamPic.png";
 import Rajasekaran from "@/assets/Team/Rajasekaran.png";
 import Rajagopalan from "@/assets/Team/Rajagopalan.png";
+import Abishek from "@/assets/Team/Abishek.png"
 import { MdVerified } from "react-icons/md";
 
 const leadershipTeam = [
@@ -21,17 +22,26 @@ const leadershipTeam = [
     name: "S. Rajasekaran",
     position: "Managing Director",
     image: Rajasekaran,
-    years: "30+",
+    years: "35+",
     specialty: "Materials Management",
     description:
-      "Managing Director of Infant Engineers Private Limited is an MBA Graduate with over 30 years experience in Materials Management & System Design and Finance. He leads the day-to-day functions on a strategic level with his domain expertise.",
+      "Managing Director of Infant Engineers Private Limited is an PhD Graduate with in Mechanical Engineering over 30 years experience in Materials Management & System Design and Finance. He leads the day-to-day functions on a strategic level with his domain expertise.",
+  },
+  {
+    name: "R. Abishek Karthik",
+    position: "Special Director",
+    image: Abishek,
+    years: "10+",
+    specialty: "Operations & Finance",
+    description:
+      "Special Director of Infant Engineers Private Limited is an BE( Mechanical Engineering ) MBA graduate with over 10 years’ experience in operations and finance . He leads the day to day operations of the organization.",
   },
 ];
 
 const TeamSection = () => {
   return (
     <section className="relative min-h-screen bg-gradient-to-b from-orange-100 to-orange-200 overflow-hidden">
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-10 xl:py-24">
+      <div className="relative z-10 container mx-auto px-4 py-10 xl:py-24">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +62,7 @@ const TeamSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-20">
           {leadershipTeam.map((leader, idx) => (
             <motion.div
               key={idx}
@@ -62,9 +72,9 @@ const TeamSection = () => {
               transition={{ duration: 0.8, delay: idx * 0.2 }}
               className="group relative"
             >
-              <div className="relative bg-white backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-orange-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-500/20">
+              <div className="relative bg-white backdrop-blur-xl rounded-3xl p-5 border border-gray-700/50 hover:border-orange-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-500/20">
                 <div className="flex justify-between items-center mb-8">
-                  <div className="flex gap-4 items-center justify-center">
+                  <div className="flex gap-2 items-center justify-center">
                     <div className="text-center">
                       <div className="text-2xl md:text-3xl font-black text-orange-500">
                         {leader.years}
@@ -87,7 +97,7 @@ const TeamSection = () => {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="grid md:grid-cols-1 xl:grid-cols-2 gap-4 items-center">
                   <div className="relative">
                     <div className="relative overflow-hidden rounded-2xl">
                       <Image
@@ -95,20 +105,20 @@ const TeamSection = () => {
                         alt={leader.name}
                         width={300}
                         height={300}
-                        className=" w-full h-52 md:h-80 object-contain md:object-cover group-hover:scale-110 transition-transform duration-700 rounded"
+                        className=" w-full h-40 md:h-80 object-contain rounded lg:object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-2xl md:text-2xl font-bold  text-gray-900 mb-2">
+                      <h3 className="text-2xl md:text-2xl lg:text-xl font-bold  text-gray-900 mb-2">
                         {leader.name}
                       </h3>
                       <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
                     </div>
 
-                    <p className="text-gray-700 leading-relaxed text-sm">
+                    <p className="text-gray-700 leading-relaxed text-sm xl:text-xs 2xl:text-sm">
                       {leader.description}
                     </p>
                   </div>

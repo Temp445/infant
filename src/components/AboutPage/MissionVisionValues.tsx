@@ -9,13 +9,13 @@ const MissionVisionValues = () => {
     {
       title: 'Mission',
       description:
-        'To manufacture precision automotive components for critical applications with the highest standards of quality, reliability, and safety.',
+        'To manufacture precision automotive & Aero space components for critical applications with the highest standards of quality, reliability, and safety.',
       icon: <MdEngineering className="text-orange-500 text-5xl" />,
     },
     {
       title: 'Vision',
       description:
-        'To be a leading global automotive components supplier recognized for innovation, excellence, and trustworthiness in the industry.',
+        'To be a leading global automotive & Aero space components supplier recognized for innovation, excellence, and trustworthiness in the industry.',
       icon: <MdOutlineTrendingUp className="text-orange-500 text-5xl" />,
     },
     {

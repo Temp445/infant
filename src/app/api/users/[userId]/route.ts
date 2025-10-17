@@ -36,3 +36,31 @@ export async function PUT(req: NextRequest, context: { params: Promise<{ userId:
     );
   }
 }
+
+export async function DELETE(
+  req: NextRequest,
+  context: { params: Promise<{ userId: string }> }
+) {
+  const { userId } = await context.params;
+
+  try {
+    await Mongoose();
+
+    const user = await User.findByIdAndDelete(userId);
+
+    if (!user) {
+      return NextResponse.json({ message: "User not found" }, { status: 404 });
+    }
+
+    return NextResponse.json(
+      { message: "User deleted successfully" },
+      { status: 200 }
+    );
+  } catch (error: any) {
+    console.error("Error deleting user:", error);
+    return NextResponse.json(
+      { message: "Server error", error: error.message },
+      { status: 500 }
+    );
+  }
+}

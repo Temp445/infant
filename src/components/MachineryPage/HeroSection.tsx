@@ -14,8 +14,8 @@ const HeroSection = () => {
         transition={{ duration: 0.8 }}
         className="relative text-center md:max-w-4xl px-6 py-16 md:py-24"
       >
-        <h1 className="text-2xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-          Powering Innovation With{" "}
+        <h1 className="text-2xl md:text-5xl  text-gray-900 leading-tight">
+          Powering Innovation With{" "} <br/>
           <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
             Advanced Machinery
           </span>
@@ -34,7 +34,7 @@ const HeroSection = () => {
             href="/products"
             className="px-6 py-3 rounded-full border text-black hover:bg-white font-semibold shadow-lg hover:scale-105 transition"
           >
-            Explore Our Products
+           Our Products
           </Link>
           <Link
             href="/contact"

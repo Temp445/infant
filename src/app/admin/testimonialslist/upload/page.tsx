@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import axios from "axios";
-import Sidebar from "@/components/Sidebar";
 import { useRouter } from "next/navigation";
 
 const TestimonialUpload = () => {
@@ -59,7 +58,6 @@ const TestimonialUpload = () => {
 
   return (
     <div className="min-h-screen flex bg-gray-100">
-      <Sidebar />
       <form
         onSubmit={handleSubmit}
         className="max-w-md mx-auto bg-white shadow-lg rounded-xl p-6 space-y-4 border h-fit mt-[10vh]"

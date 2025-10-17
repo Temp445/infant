@@ -13,6 +13,7 @@ const Sidebar = () => {
     { label: "Clients", icon: <UserStar className="w-5 h-5" />, href: "/admin/clientslist" },
     { label: "Testimonials", icon: <Quote className="w-5 h-5" />, href: "/admin/testimonialslist" },
     { label: "Machinery", icon: <Factory className="w-5 h-5" />, href: "/admin/machinerylist" },
+    { label: "Machinery Count", icon: <Factory className="w-5 h-5" />, href: "/admin/machinery-detail" },
     { label: "Users", icon: <Users className="w-5 h-5" />, href: "/admin/users" },
   ];
 

@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
-import Sidebar from '@/components/Sidebar';
 import { useRouter } from 'next/navigation';
 const MachineryUpload = () => {
   const router = useRouter();
@@ -56,7 +55,6 @@ const MachineryUpload = () => {
 
   return (
     <div className="min-h-screen flex bg-gray-100">
-      <Sidebar />
       <div className="flex-1 p-8">
         <div className="max-w-xl mx-auto bg-white shadow-md rounded-lg p-8">
           <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">

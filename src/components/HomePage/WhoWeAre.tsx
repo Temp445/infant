@@ -40,8 +40,8 @@ const WhoWeAre = () => {
 
           <motion.div className="flex flex-col gap-4">
             {[
-              "Infant Engineers Private Limited is a leading manufacturer of precision turned components for critical and safety applications in the automotive industry, specializing in brake and engine systems.",
-              "Serving Tier-1 suppliers and OEMs, maintaining the highest quality standards. Our clients include Mando India, Brakes India, Sundaram Clayton, Sundaram Fasteners, JKM Daerim, Ucal Fuel Systems, Lucas TVS.",
+              "Infant Engineers Private Limited is a leading manufacturer of precision turned components for critical and safety applications in the automotive industry & Aero Space Industry, specializing in brake, Steering, suspension, Motor shafts, engine systems.",
+              "Serving Tier-1 suppliers and OEMs, maintaining the highest quality standards. Our clients include Mando India, Brakes India, Sundaram Clayton, Sundaram Fasteners, Brakes India , ZF Rane, Lucas TVS, Violin Technologies & Kun Aero Space",
               "Combining technical expertise, advanced manufacturing, and stringent quality control to deliver components meeting the most demanding performance and safety requirements."
             ].map((text, idx) => (
               <motion.p

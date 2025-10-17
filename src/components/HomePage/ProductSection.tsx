@@ -55,7 +55,7 @@ const ProductSection = () => {
           className="text-gray-600 text-justify md:text-balance md:text-lg max-w-5xl mx-auto leading-relaxed"
         >
           Discover our range of high-precision turned components, crafted for
-          safety-critical applications in brakes, engines, and industrial
+          safety-critical applications in brakes, engines, and other industrial
           systems. Every product is engineered to deliver durability, unmatched
           reliability, and peak performance you can trust.
         </motion.p>
@@ -78,10 +78,10 @@ const ProductSection = () => {
           {products.slice(0, 8).map((product, idx) => (
             <div
               key={idx}
-              className="flex-shrink-0 w-48 bg-white rounded-2xl border border-orange-200 shadow-md p-4 flex flex-col items-center cursor-pointer hover:shadow-lg transition"
+              className="flex-shrink-0 w-72 bg-white rounded-2xl border border-orange-200 shadow-md p-4 flex flex-col items-center cursor-pointer hover:shadow-lg transition"
               onClick={() => router.push("/products")}
             >
-              <div className="w-32 h-32 relative mb-4">
+              <div className="w- h relative mb-4">
                 <img
                   src={product.productImage[0]}
                   alt={product.productName}

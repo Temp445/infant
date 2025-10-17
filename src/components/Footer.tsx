@@ -9,7 +9,7 @@ import { FaLocationDot } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300">
-      <div className="container mx-auto px-6 lg:pr-10 py-12 flex  md:flex-row gap-20 flex-wrap xl:justify-center-safe">
+      <div className="container mx-auto px-6 lg:pr-10 pt-12 flex  md:flex-row gap-20 flex-wrap xl:justify-center-safe">
         <div>
           <div className='flex gap-2'>
             <Image src={logo} alt="Company Logo" className="h-16 md:h-20 w-46 rounded -mt-1" />
@@ -77,18 +77,40 @@ const Footer = () => {
             </li>
             
             <li className="flex items-center gap-3">
-              <Phone className="w-5 h-5 text-orange-500" />
-              <span>+91 44 42324222</span>
+              <Phone className="w-5 h-5  -mt-5 text-orange-500" />
+              <div className="flex flex-col">
+                  <a href="tel:+919701946123" className="font-medium">
+                    +91 9701946123
+                  </a>
+                  <a href="tel:+919841706116" className="font-medium">
+                    +91 9841706116
+                  </a>
+                </div>
+
             </li>
             <li className="flex items-center gap-3">
-              <Mail className="w-5 h-5 text-orange-500" />
-              <span>info@infantengineers.in</span>
+              <Mail className="w-5 h-5 -mt-5 text-orange-500" />
+              <div>
+                  <a
+                    href="mailto:abishek@infantengineers.in"
+                    className="font-medium"
+                  >
+                    abishek@infantengineers.in
+                  </a>{" "}
+                  <br />
+                  <a
+                    href="mailto:rajasekaran@infantengineers.in"
+                    className="font-medium"
+                  >
+                    rajasekaran@infantengineers.in
+                  </a>
+                </div>
             </li>
           </ul>
           
         </div>
 
-          <div className=" w-full md:w-60 lg:w-80 h-46 rounded-lg overflow-hidden border border-gray-700 lg:hidden xl:block">
+          <div className=" w-full md:w-60 lg:w-80 h-46 rounded-lg overflow-hidden border border-gray-700 lg:hidden 2xl:block">
             <iframe
               title="Infant Engineers Location"
              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15546.402389406661!2d80.215027!3d13.061076!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266947093a395%3A0x10b037f79c6e698f!2sBrindavanam%20Apartments!5e0!3m2!1sen!2sus!4v1755847210839!5m2!1sen!2sus"

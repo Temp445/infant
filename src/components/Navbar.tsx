@@ -95,7 +95,7 @@ export default function Navbar() {
               </Link>
 
               {/* Desktop */}
-              <div className="hidden lg:flex space-x-8">
+              <div className="hidden lg:flex space-x-5">
                 {navigation.map((item) => {
                  const isActive = pathname === item.href;
                  if (item.onClick) {

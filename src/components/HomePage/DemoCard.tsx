@@ -29,8 +29,7 @@ const DemoCard = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-gray-700 text-lg md:text-xl mb-8 max-w-lg mx-auto lg:mx-0"
           >
-            We use advanced manufacturing processes to deliver precise, reliable,
-            and efficient automotive components.
+            We use advanced manufacturing processes to deliver precise, reliable, and efficient automotive & Aeospace components. 
           </motion.p>
 
           <motion.div
@@ -67,7 +66,8 @@ const DemoCard = () => {
             <FiPhone className="text-orange-600 text-3xl" />
             <div className="text-left">
               <p className="text-sm text-orange-700">Call Us</p>
-              <p className="text-lg font-semibold text-gray-900">+91 44 42324222</p>
+              <a href="tel:+919701946123" className="text-lg font-semibold text-gray-900">+91 9701946123</a> <br />
+              <a href="tel:+919841706116" className="text-lg font-semibold text-gray-900">+91 9841706116</a>
             </div>
           </div>
 
@@ -75,7 +75,8 @@ const DemoCard = () => {
             <FiMail className="text-orange-600 text-3xl" />
             <div className="text-left">
               <p className="text-sm text-orange-700">Email Us</p>
-              <p className="text-lg font-semibold text-gray-900">info@infantengineers.in</p>
+              <a href="mailto:abishek@infantengineers.in" className="text-lg font-semibold text-gray-900 hover:underline">abishek@infantengineers.in</a> <br />
+              <a href="mailto:rajasekaran@infantengineers.in" className="text-lg font-semibold text-gray-900 hover:underline">rajasekaran@infantengineers.in</a>
             </div>
           </div>
         </motion.div>

@@ -13,18 +13,18 @@ const whyChooseUs = [
   },
   {
     icon: <TbCertificate className="w-7 h-7 text-white" />,
-    title: 'ISO/TS 16949 Certified',
+    title: 'ISO/IATF:16949, AS9100D certified.',
     desc: 'Our processes meet international automotive quality standards, ensuring reliability and compliance with OEM requirements.'
   },
   {
     icon: <FaClock className="w-7 h-7 text-white" />,
     title: 'Decades of Experience',
-    desc: 'Over 25 years serving Tier-1 suppliers and OEMs, delivering projects on time and to exact specifications.'
+    desc: 'Over 35 years serving Tier-1 suppliers and OEMs, delivering projects on time and to exact specifications.'
   },
   {
     icon: <FaCheckCircle className="w-7 h-7 text-white" />,
     title: 'Low Defect Rate',
-    desc: 'Supply record with rejections below 100 PPM, reflecting our commitment to excellence and reliability.'
+    desc: 'Supply record with rejections below 100 PPM, reflecting our commitment to excellence and reliability. We maintain near zero incidences at customer end.'
   },
   {
     icon: <FaIndustry className="w-7 h-7 text-white" />,
@@ -54,7 +54,7 @@ const WhyChooseUs = () => {
         whileInView={{x:0, opacity:1}}
         transition={{duration:0.8, ease:"easeInOut" }}
          className="text-gray-700 md:text-lg max-w-6xl">
-          For more than 25 years, we’ve been driving innovation in the automotive manufacturing industry—delivering high-precision components built on a foundation of quality, reliability, and trust. Our commitment ensures every product performs at its best, every time.
+          For more than 35 years, we’ve been driving innovation in the automotive manufacturing industry—delivering high-precision components built on a foundation of quality, reliability, and trust. Our commitment ensures every product performs at its best, every time.
         </motion.p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10  mx-auto">

@@ -2,14 +2,11 @@
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { PhoneCall, Mails, X , Sparkles } from "lucide-react";
+import { PhoneCall, Mails, X, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaGear } from "react-icons/fa6";
 import { GiGears } from "react-icons/gi";
-
 
 interface Product {
   _id: string;
@@ -43,12 +40,14 @@ const Products = () => {
 
   if (loading) {
     return (
-   <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100">
         <div className="flex flex-col items-center justify-center min-h-screen">
           <div className="relative">
             <div className="w-16 h-16 border-4 border-blue-200 border-t-orange-600 rounded-full animate-spin"></div>
           </div>
-          <p className="mt-4 text-lg font-medium text-gray-600">Loading products...</p>
+          <p className="mt-4 text-lg font-medium text-gray-600">
+            Loading products...
+          </p>
         </div>
       </div>
     );
@@ -67,70 +66,80 @@ const Products = () => {
 
   return (
     <>
-      <Navbar />
       <div className="min-h-auto pb-32 text-white">
+        <div className="relative py-10 md:py-24 overflow-hidden bg-gradient-to-br from-orange-100 via-orange-200 to-orange-300">
+          <div className="absolute top-0 left-0 text-8xl text-orange-500/20 -translate-x-5 -translate-y-5">
+            <FaGear />
+          </div>
+          <div className="absolute bottom-0 right-0 text-9xl text-red-500/20">
+            <GiGears />
+          </div>
+          <div className="absolute top-10 right-0 text-2xl text-red-500/40">
+            <Sparkles />
+          </div>
+          <div className="absolute  bottom-20  left-10 text-red-500/20 animate-pulse">
+            <Sparkles className="w-10 h-10 text-5xl rotate-6" />
+          </div>
 
-    <div className="relative py-10 md:py-24 overflow-hidden bg-gradient-to-br from-orange-100 via-orange-200 to-orange-300">
-      
-      <div className='absolute top-0 left-0 text-8xl text-orange-500/20 -translate-x-5 -translate-y-5'><FaGear /></div>
-      <div className='absolute bottom-0 right-0 text-9xl text-red-500/20'><GiGears /></div>
-      <div className='absolute top-10 right-0 text-2xl text-red-500/40'><Sparkles /></div>
-      <div className='absolute  bottom-20  left-10 text-red-500/20 animate-pulse'><Sparkles  className="w-10 h-10 text-5xl rotate-6"/></div>
+          <div className="relative z-10 max-w-6xl mx-auto text-center px-6">
+            <motion.h1
+              className="text-2xl md:text-5xl text-gray-800  mb-6 drop-shadow-lg"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              Explore Our{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
+                Automotive Components
+              </span>
+            </motion.h1>
 
-      <div className="relative z-10 max-w-6xl mx-auto text-center px-6">
-    
-        <motion.h1
-          className="text-2xl md:text-5xl text-gray-800 font-extrabold mb-6 drop-shadow-lg"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Explore Our{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
-            Automotive Components
-          </span>
-        </motion.h1>
+            <motion.p
+              className="md:text-xl text-gray-700 mb-12 max-w-3xl mx-auto font-extralight leading-relaxed text-justify md:text-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+            >
+              Discover a wide range of{" "}
+              <span className="font-semibold text-gray-800">
+                precision-engineered automotive components
+              </span>{" "}
+              designed for durability, performance, and reliability. Browse our{" "}
+              <span className="font-semibold text-gray-800">
+                custom solutions
+              </span>{" "}
+              to find the perfect fit for your automotive projects.
+            </motion.p>
 
-        <motion.p
-          className="md:text-xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed text-justify md:text-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-        >
-          Discover a wide range of <span className="font-semibold text-gray-800">precision-engineered automotive components</span> designed for durability, performance, and reliability. Browse our <span className="font-semibold text-gray-800">custom solutions</span> to find the perfect fit for your automotive projects.
-        </motion.p>
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12">
+              <motion.a
+                href="tel:+914442324222"
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center space-x-4 bg-white backdrop-blur-md px-6 py-3 rounded-xl border border-orange-400 shadow-lg cursor-pointer transition"
+              >
+                <span className="w-10 h-10 text-white bg-gradient-to-br from-orange-500 to-red-500 rounded-full p-2 flex items-center justify-center">
+                  <PhoneCall className="w-6 h-6" />
+                </span>
+                <span className="font-semibold md:text-lg text-gray-800">
+                  +91 44 42324222
+                </span>
+              </motion.a>
 
-        <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12">
-          
-          <motion.a 
-            href="tel:+914442324222"
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-4 bg-white backdrop-blur-md px-6 py-3 rounded-xl border border-orange-400 shadow-lg cursor-pointer transition"
-          >
-            <span className="w-10 h-10 text-white bg-gradient-to-br from-orange-500 to-red-500 rounded-full p-2 flex items-center justify-center">
-              <PhoneCall className="w-6 h-6" />
-            </span>
-            <span className="font-semibold md:text-lg text-gray-800">
-              +91 44 42324222
-            </span>
-          </motion.a>
-
-          <motion.a 
-            href="mailto:info@infantengineers.in"
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-4 bg-white backdrop-blur-md px-6 py-3 rounded-xl border border-orange-400 shadow-lg cursor-pointer transition"
-          >
-            <span className="w-10 h-10 text-white bg-gradient-to-br from-orange-500 to-red-500 rounded-full p-2 flex items-center justify-center">
-              <Mails className="w-6 h-6" />
-            </span>
-            <span className="font-semibold md:text-lg text-gray-800">
-              info@infantengineers.in
-            </span>
-          </motion.a>
-
+              <motion.a
+                href="mailto:info@infantengineers.in"
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center space-x-4 bg-white backdrop-blur-md px-6 py-3 rounded-xl border border-orange-400 shadow-lg cursor-pointer transition"
+              >
+                <span className="w-10 h-10 text-white bg-gradient-to-br from-orange-500 to-red-500 rounded-full p-2 flex items-center justify-center">
+                  <Mails className="w-6 h-6" />
+                </span>
+                <span className="font-semibold md:text-lg text-gray-800">
+                  info@infantengineers.in
+                </span>
+              </motion.a>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
         <div className="py-20 px-6 lg:px-20">
           <div className="container mx-auto">
@@ -146,7 +155,6 @@ const Products = () => {
                   whileHover="hover"
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                
                   <div className="relative w-full  overflow-hidden">
                     {product.productImage && product.productImage.length > 0 ? (
                       <motion.img
@@ -242,7 +250,6 @@ const Products = () => {
           )}
         </AnimatePresence>
       </div>
-      <Footer />
     </>
   );
 };

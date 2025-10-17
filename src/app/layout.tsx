@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from '@/context/AuthContext';
 import BackToTop from "@/components/BackToTop";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const domainUrl = process.env.NEXT_PUBLIC_API_FRONTEND_URL || '';
 
@@ -20,17 +22,15 @@ export const metadata: Metadata = {
   title: "Infant Engineers Pvt Ltd",
   description: "We are a leading automotive component manufacturer providing precision-engineered solutions for global industries. With advanced technology, strict quality control, and OEM expertise, we deliver durable, high-performance parts trusted by automotive brands worldwide",
   keywords:"automotive component manufacturer, precision engineering, auto parts manufacturing, OEM supplier, automotive industry solutions, custom automotive components, high quality auto parts, automotive machining, industrial manufacturing, global auto component supplier",
-  
-  metadataBase: new URL(domainUrl),
 
   openGraph: {
     title: 'Infant Engineers Pvt Ltd',
     description: 'We are a leading automotive component manufacturer providing precision-engineered solutions for global industries. With advanced technology, strict quality control, and OEM expertise, we deliver durable, high-performance parts trusted by automotive brands worldwide',
-    url: '/',
+    url: `${domainUrl}`,
     siteName: 'Infant Engineers Pvt Ltd',
      images: [
       {
-        url: '/og-images/Logo.png',
+        url: `${domainUrl}/og-images/Logo.png`,
         width: 1200,
         height: 630,
         alt: 'Infant Engineers Pvt Ltd',
@@ -54,8 +54,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <AuthProvider>
+          <Navbar/>
         {children}
         <BackToTop/>
+        <Footer/>
         </AuthProvider>
       </body>
     </html>

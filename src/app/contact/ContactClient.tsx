@@ -6,10 +6,9 @@ import { sendWhatsappMessage } from "@/services/whatsapp/whatsappService";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { Facebook, Linkedin, Youtube ,Mails, PhoneCall, MapPin } from "lucide-react";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { BsTwitterX } from "react-icons/bs";
+import { useRouter } from "next/navigation";
 
 const service_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
 const template_ID = process.env.NEXT_PUBLIC_EMAILJS_ENQ_TEMPLATE_ID || "";
@@ -28,6 +27,7 @@ const Contact = () => {
   const [phoneError, setPhoneError] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const emailInputRef = useRef<HTMLInputElement | null>(null);
+  const router = useRouter();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -97,7 +97,7 @@ const Contact = () => {
 
     try {
       await emailjs.send(service_ID, template_ID, formData, publicKey);
-      alert("Your enquiry has been sent successfully!");
+      router.push('/thank-you')
       formCurrent.reset();
       setEmail("");
       setPhone("");
@@ -138,7 +138,6 @@ const Contact = () => {
 
   return (
     <>
-      <Navbar />
       <div className="min-h-auto pb-20 bg-gradient-to-b from-orange-100 via-white to-orange-50">
 
         <div className="bg-black/95 py-20 text-center text-white relative">
@@ -255,12 +254,14 @@ const Contact = () => {
           <div className="flex flex-col gap-6">
             <div className="bg-white shadow-lg rounded-xl p-6 border-l-4 border-orange-500">
               <h3 className="font-semibold text-lg mb-2 flex gap-2"><span><Mails className="w-6 h-6 text-red-500"/></span> Email</h3>
-              <p className="text-gray-700">info@infantengineers.in</p>
+              <a href="mailto:abishek@infantengineers.in" className="text-gray-700">abishek@infantengineers.in</a>
+              <a href="mailto:rajasekaran@infantengineers.in" className="text-gray-700">rajasekaran@infantengineers.in</a>
             </div>
 
             <div className="bg-white shadow-lg rounded-xl p-6 border-l-4 border-orange-500">
               <h3 className="font-semibold text-lg mb-2 flex gap-2"><span><PhoneCall className="w-5 h-5 text-blue-800 mt-1"/></span> Phone</h3>
-              <p className="text-gray-700">+91 44 42324222</p>
+              <a href="tel:+919701946123" className="text-gray-700">+91 9701946123</a>
+              <a href="tel:+919841706116" className="text-gray-700">+91 9841706116</a>
             </div>
 
             <div className="bg-white shadow-lg rounded-xl p-6 border-l-4 border-orange-500">
@@ -289,7 +290,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-        <Footer />
 
     </>
   );

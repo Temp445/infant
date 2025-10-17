@@ -58,7 +58,7 @@ const CompanyOverview = () => (
             <MdDoubleArrow className="text-gray-700 text-2xl flex-shrink-0 mt-1" />
             <p className="md:text-lg text-gray-700 leading-relaxed">
               We are certified with <span className="font-semibold text-orange-600">AS 9100D</span>, 
-              <span className="font-semibold text-orange-600"> ISO 9001:2015</span>, and TS 16949, demonstrating our commitment 
+              <span className="font-semibold text-orange-600"> ISO 9001:2015</span>, and IATF16949, demonstrating our commitment 
               to world-class quality standards.
             </p>
           </motion.div>
@@ -73,7 +73,7 @@ const CompanyOverview = () => (
             <p className="md:text-lg text-gray-700 leading-relaxed">
               As a trusted Tier-2 supplier to OEMs like <span className="font-semibold">Hyundai</span> and 
               <span className="font-semibold"> Maruti</span>, we work with Tier-1 partners such as Brakes India, Lucas TVS, 
-              Sundaram Clayton, and Bridgestone India.
+              Sundaram Clayton, Kun Aero Space, Violin Tecnologies.
             </p>
           </motion.div>
         </motion.div>

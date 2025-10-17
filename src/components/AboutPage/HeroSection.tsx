@@ -70,7 +70,7 @@ const HeroSection = () => {
   className="mt-10 lg:mt-0 hidden md:flex flex-wrap justify-center lg:justify-end gap-4 w-full lg:w-auto lg:absolute bottom-5 right-10 "
 >
   <div className="bg-gray-100 p-6 rounded-xl shadow-lg text-center min-w-[110px]">
-    <h3 className="text-orange-600 font-extrabold text-2xl">25+</h3>
+    <h3 className="text-orange-600 font-extrabold text-2xl">35+</h3>
     <p className="text-gray-800 font-bold text-sm">Years</p>
   </div>
 
@@ -80,7 +80,7 @@ const HeroSection = () => {
   </div>
 
   <div className="bg-gray-100 p-6 rounded-xl shadow-lg text-center min-w-[110px]">
-    <h3 className="text-orange-600 font-extrabold text-2xl">99%</h3>
+    <h3 className="text-orange-600 font-extrabold text-2xl">100%</h3>
     <p className="text-gray-800 font-bold text-sm">On-Time Delivery</p>
   </div>
 </motion.div>

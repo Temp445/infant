@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import axios from "axios";
-import Sidebar from "@/components/Sidebar";
 
 const TestimonialUpdate = () => {
   const { id } = useParams();
@@ -76,7 +75,6 @@ const TestimonialUpdate = () => {
 
   return (
     <div className="min-h-screen flex bg-gray-100">
-      <Sidebar />
       <form
         onSubmit={handleUpdate}
         className="max-w-md mx-auto bg-white shadow-lg rounded-xl p-6 space-y-4 border h-fit mt-[10vh]"

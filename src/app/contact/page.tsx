@@ -7,16 +7,14 @@ export const metadata: Metadata = {
   title: 'Contact Us | Infant Engineers Pvt Ltd',
   description: 'Get in touch with our team for automotive component manufacturing solutions. Contact us today for OEM parts, precision engineering, and reliable global supply support.',
  
-  metadataBase: new URL(domainUrl),
- 
   openGraph: {
     title: 'Contact Us | Infant Engineers Pvt Ltd',
     description: 'Get in touch with our team for automotive component manufacturing solutions. Contact us today for OEM parts, precision engineering, and reliable global supply support.',
-    url: '/contact',
+    url: `${domainUrl}/contact`,
     siteName: 'Infant Engineers Pvt Ltd',
     images: [
       {
-        url: '/og-images/Logo.png', 
+        url: `${domainUrl}/og-images/Logo.png`, 
         width: 1200,
         height: 630,
         alt: 'Infant Engineers Pvt Ltd',
