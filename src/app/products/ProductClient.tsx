@@ -112,8 +112,7 @@ const Products = () => {
             </motion.p>
 
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12">
-              <motion.a
-                href="tel:+914442324222"
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="flex items-center space-x-4 bg-white backdrop-blur-md px-6 py-3 rounded-xl border border-orange-400 shadow-lg cursor-pointer transition"
               >
@@ -129,23 +128,24 @@ const Products = () => {
                 </span>
                  </div>
 
-              </motion.a>
+              </motion.div>
 
-              <motion.a
-                href="mailto:info@infantengineers.in"
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="flex items-center space-x-4 bg-white backdrop-blur-md px-6 py-3 rounded-xl border border-orange-400 shadow-lg cursor-pointer transition"
               >
                 <span className="w-10 h-10 text-white bg-gradient-to-br from-orange-500 to-red-500 rounded-full p-2 flex items-center justify-center">
                   <Mails className="w-6 h-6" />
                 </span>
-                <span className="font-semibold md:text-lg text-gray-800">
+                <div className="text-start">
+                  <span className=" md:text-lg text-gray-800">
                  abishek@infantengineers.in
                 </span> <br />
                 <span className="font-semibold md:text-lg text-gray-800">
                  rajasekaran@infantengineers.in
                 </span>
-              </motion.a>
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>
