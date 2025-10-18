@@ -7,7 +7,7 @@ import { NextResponse } from "next/server";
 export async function GET() {
     try{
         await Mongoose();
-        const products = await Product.find().sort({ uploadedAt: -1 });
+        const products = await Product.find();
         return NextResponse.json({ success: true, data: products }, {status: 200});
     } catch (err: any) {
     return NextResponse.json(

@@ -120,10 +120,10 @@ const Products = () => {
                   <PhoneCall className="w-6 h-6" />
                 </span>
               <div>
-                  <span className="font-semibold md:text-lg text-gray-800">
+                  <span className=" text-gray-800">
                   +91 9701946123
                 </span> <br/>
-                <span className="font-semibold md:text-lg text-gray-800">
+                <span className="text-gray-800">
                   +91 9841706116
                 </span>
                  </div>
@@ -138,10 +138,10 @@ const Products = () => {
                   <Mails className="w-6 h-6" />
                 </span>
                 <div className="text-start">
-                  <span className=" md:text-lg text-gray-800">
+                  <span className=" text-gray-800">
                  abishek@infantengineers.in
                 </span> <br />
-                <span className="font-semibold md:text-lg text-gray-800">
+                <span className="text-gray-800">
                  rajasekaran@infantengineers.in
                 </span>
                 </div>
@@ -205,7 +205,7 @@ const Products = () => {
               onClick={() => setSelectedProduct(null)}
             >
               <motion.div
-                className="relative bg-white rounded-2xl shadow-2xl max-w-xl w-full p-6"
+                className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-6"
                 onClick={(e) => e.stopPropagation()}
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -240,19 +240,17 @@ const Products = () => {
                 </h2>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <Link
-                    href="tel:+914442324222"
+                  <span
                     className="flex items-center gap-2 px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg shadow hover:bg-orange-700 transition"
                   >
-                    <PhoneCall /> +91 44 42324222
-                  </Link>
+                    <PhoneCall /> +91 9841706116 <br />+91 9701946123
+                  </span>
 
-                  <Link
-                    href="mailto:info@infantengineers.in"
+                  <span
                     className="flex items-center gap-2 px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow hover:bg-black transition"
                   >
-                    <Mails /> info@infantengineers.in
-                  </Link>
+                    <Mails />abishek@infantengineers.in <br /> rajasekaran@infantengineers.in
+                  </span>
                 </div>
               </motion.div>
             </motion.div>
