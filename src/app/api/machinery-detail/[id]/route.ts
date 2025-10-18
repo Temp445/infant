@@ -2,13 +2,13 @@ import Mongoose from "@/lib/mongoose";
 import MachineryDetail from "@/models/MachineryDetail";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(
-  req: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function GET(req: NextRequest) {
   try {
     await Mongoose();
-    const { id } = params;
+     const url = new URL(req.url);
+    const pathname = url.pathname; 
+    const parts = pathname.split('/');
+    const id = parts[parts.length - 1];
 
     const machinery = await MachineryDetail.findById(id);
     if (!machinery) {
@@ -27,13 +27,14 @@ export async function GET(
   }
 }
 
-export async function PUT(
-  req: NextRequest,
-  { params }: { params: { id: string } }
-) {
+
+export async function PUT(req: NextRequest) {
   try {
     await Mongoose();
-    const { id } = params;
+    const url = new URL(req.url);
+    const parts = url.pathname.split("/");
+    const id = parts[parts.length - 1];
+
    const { machineName, count } = await req.json();
 
     if (!machineName && !count) {
@@ -66,13 +67,12 @@ export async function PUT(
 }
 
 
-export async function DELETE(
-  req: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function DELETE(req: NextRequest) {
   try {
     await Mongoose();
-    const { id } = params;
+    const url = new URL(req.url);
+    const parts = url.pathname.split("/");
+    const id = parts[parts.length - 1];
 
     const deleted = await MachineryDetail.findByIdAndDelete(id);
 

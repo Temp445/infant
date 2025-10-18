@@ -120,9 +120,15 @@ const Products = () => {
                 <span className="w-10 h-10 text-white bg-gradient-to-br from-orange-500 to-red-500 rounded-full p-2 flex items-center justify-center">
                   <PhoneCall className="w-6 h-6" />
                 </span>
+              <div>
+                  <span className="font-semibold md:text-lg text-gray-800">
+                  +91 9701946123
+                </span> <br/>
                 <span className="font-semibold md:text-lg text-gray-800">
-                  +91 44 42324222
+                  +91 9841706116
                 </span>
+                 </div>
+
               </motion.a>
 
               <motion.a
@@ -134,7 +140,10 @@ const Products = () => {
                   <Mails className="w-6 h-6" />
                 </span>
                 <span className="font-semibold md:text-lg text-gray-800">
-                  info@infantengineers.in
+                 abishek@infantengineers.in
+                </span> <br />
+                <span className="font-semibold md:text-lg text-gray-800">
+                 rajasekaran@infantengineers.in
                 </span>
               </motion.a>
             </div>
