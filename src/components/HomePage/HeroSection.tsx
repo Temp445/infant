@@ -3,131 +3,80 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Image1 from "@/assets/Image2.png";
-import Image2 from "@/assets/Image4.jpg";
-import Image3 from "@/assets/Image3.jpg";
-import { FaGear } from "react-icons/fa6";
+import Image1 from "@/assets/bg1.png";
 import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-br from-orange-50 via-orange-100 to-orange-200 overflow-hidden">
-      <div className="absolute top-0 right-0 w-72 h-72 bg-red-500/20 rotate-45 -translate-x-36 -translate-y-36 rounded-xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-600/20 rotate-12 -translate-x-48 translate-y-24 rounded-xl"></div>
-      <div
-        className="absolute top-0 left-0 text-8xl text-orange-500/20 -translate-x-5 -translate-y-5 animate-spin"
-        style={{ animationDuration: "20s" }}
+<section className="relative overflow-hidden">
+  <div className="container relative z-10 mx-auto flex flex-col md:flex-row lg:items-center gap-5 2xl:pl-12">
+    <div className="w-full text-left space-y-4 lg:space-y-6 px-4 order-2 md:order-1">
+      <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="relative text-3xl md:text-3xl xl:text-5xl 2xl:text-6xl font-medium text-gray-900 font-oswald leading-tight"
       >
-        <FaGear />
-      </div>
+        High-Quality Components, <br />
+        <span className="text-[#1F5A8B]">Built with Precision</span>
+      </motion.h1>
 
-      <div className="container relative z-10 mx-auto px-4 lg:px-6 xl:px-12 py-10 lg:py-20 flex flex-col lg:flex-row items-center gap-12">
-        <motion.div className="w-full lg:w-1/2 text-left space-y-6">
-          <motion.div
-            initial={{ y: -50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeIn" }}
-            className="relative"
-          >
-            <div className="absolute w-1 h-12 md:h-16 2xl:h-24 top-1 md:top-3 -left-3 bg-orange-600"></div>
-            <h1 className="text-2xl md:text-4xl  2xl:text-5xl font-bold text-gray-900 leading-tight">
-              High-Quality Components,{" "}
-              <span className="bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent">
-                Built with Precision
-              </span>
-            </h1>
-          </motion.div>
-          <motion.div initial={{ z: -50, opacity: 0 }}></motion.div>
-          <motion.div  className="gap-5">
-            <motion.p
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeIn"}}
-             className="md:text-lg text-gray-800 max-w-2xl mb-5">
-              Delivering precision-engineered components for brakes and engines
-              trusted by leading OEMs and Tier-1 suppliers worldwide.
-            </motion.p>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="space-y-4"
+      >
+        <p className="lg:text-lg text-gray-700 max-w-2xl">
+          Delivering precision-engineered components for brakes and engines
+          trusted by leading OEMs and Tier-1 suppliers worldwide.
+        </p>
+        <p className="lg:text-lg text-gray-700 max-w-2xl">
+          With advanced manufacturing capabilities and a strong focus on
+          quality, we specialize in producing reliable components that power
+          safety and efficiency in the automotive industry.
+        </p>
+      </motion.div>
 
-            <motion.p 
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeIn", delay: 0.2 }}
-            className="md:text-lg text-gray-800 max-w-2xl">
-              With advanced manufacturing capabilities and a strong focus on
-              quality, we specialize in producing reliable components that power
-              safety and efficiency in the automotive industry.
-            </motion.p>
-          </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+        className="flex flex-row gap-6 justify-start mt-8 md:mt-3 lg:mt-12 mb-5"
+      >
+        <Link
+          href="/contact"
+          className="px-6 py-3 lg:text-lg font-semibold text-white bg-[#FF0000] hover:bg-[#C40C0C] rounded-full shadow-lg transition-all duration-300"
+        >
+          Contact Us
+        </Link>
+        <Link
+          href="/products"
+          className="px-6 py-3 lg:text-lg font-semibold border border-gray-700 text-gray-800 rounded-full shadow transition-all duration-300"
+        >
+          Our Products
+        </Link>
+      </motion.div>
+    </div>
 
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="flex flex-row gap-4 justify-center lg:justify-start mt-8 lg:mt-12"
-          >
-            <Link
-              href="/contact"
-              className="px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-orange-500 to-red-500 rounded-xl shadow-lg"
-            >
-              Contact Us
-            </Link>
-            <Link
-              href="/products"
-              className="px-6 py-3 text-lg font-semibold border border-gray-800 text-gray-800 rounded-xl shadow"
-            >
-              Our Products
-            </Link>
-          </motion.div>
-          
-        </motion.div>
+    <div className="w-full relative md:h-[500px] xl:h-[530px] 2xl:h-[650px] md:[clip-path:polygon(0%_0,100%_0,100%_100%,15%_100%)] md:order-2">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+        whileHover={{ scale: 1.05 }}
+      >
+        <Image
+          src={Image1}
+          alt="Industrial Components"
+          className="w-full h-full object-cover"
+          priority
+        />
+      </motion.div>
+    </div>
+  </div>
+</section>
 
-        <motion.div className="w-full lg:w-1/2 relative flex flex-col gap-4">
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            whileHover={{ scale: 1.05 }}
-            className="overflow-hidden rounded-xl shadow-2xl border-4 border-white"
-          >
-            <Image
-              src={Image1}
-              alt="Infant"
-              className="w-full md:h-[320px] object-cover"
-              priority
-            />
-          </motion.div>
-
-          <div className="grid grid-cols-3 gap-2">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              initial={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="overflow-hidden rounded-xl shadow-lg border-4 border-white"
-            >
-              <Image
-                src={Image2}
-                alt="Infant"
-                className="w-full h-[210px] object-cover"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ x: 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              whileHover={{ scale: 1.05 }}
-              className="overflow-hidden rounded-xl shadow-lg border-4 border-white col-span-2"
-            >
-              <Image
-                src={Image3}
-                alt="Infant"
-                className="w-full h-[210px] object-cover"
-              />
-            </motion.div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
   );
 };
 

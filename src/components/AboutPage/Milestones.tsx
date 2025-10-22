@@ -53,16 +53,15 @@ const Milestones = () => {
   return (
     <section className="relative bg-white py-10 xl:py-24 px-6 xl:px-16 overflow-hidden">
       <div className="max-w-7xl mx-auto text-center mb-10 md:mb-20">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
-          Our <span className='text-transparent bg-clip-text bg-gradient-to-br from-orange-500 to-red-500'>Milestones</span>
-        </h2>
+        <h2 className="text-3xl md:text-4xl font-semibold font-oswald text-gray-900 mb-6">
+          Our Milestones </h2>
         <p className="text-gray-600 md:text-lg max-w-3xl mx-auto">
           A journey of excellence, innovation, and recognition through the years.
         </p>
       </div>
 
       <div className="relative max-w-6xl mx-auto">
-        <div className="hidden md:block absolute top-0 bottom-0 left-10 lg:left-1/2 -translate-x-1/2 w-1 bg-gradient-to-b from-orange-500 via-yellow-400 to-orange-600"></div>
+        <div className="hidden md:block absolute top-0 bottom-0 left-10 lg:left-1/2 -translate-x-1/2 w-1 bg-gradient-to-b from-[#1F5A8B] to-[#7aa6e7]"></div>
 
         <div className="space-y-20">
           {milestones.map((item, idx) => (
@@ -78,17 +77,17 @@ const Milestones = () => {
             >
 
               <div
-                className={`bg-gray-50 border-l-4 border-orange-500 border p-5 md:p-10 rounded-2xl shadow-lg max-w-md z-10 text-left md:text-left ${
+                className={`bg-gray-50 border-l-4 border-[#1F5A8B] border p-5 md:p-10 rounded-2xl shadow-lg max-w-md z-10 text-left md:text-left ${
                   idx % 2 === 0 ? 'lg:mr-auto' : 'lg:ml-auto'
                 }`}
               >
-                <h3 className="text-xl md:text-2xl font-bold text-orange-600 mb-3">
+                <h3 className="text-xl md:text-2xl font-bold text-[#1F5A8B] mb-3">
                   {item.year}  {item.title}
                 </h3>
                 <p className="text-gray-700 text-base leading-relaxed">{item.description}</p>
               </div>
 
-              <div className="absolute left-5 -top-10 md:left-10 md:top-12 lg:left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-orange-500 flex items-center justify-center shadow-xl z-20">
+              <div className="absolute left-5 -top-10 md:left-10 md:top-12 lg:left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-[#1F5A8B] flex items-center justify-center shadow-xl z-20">
                 {item.icon}
               </div>
             </motion.div>

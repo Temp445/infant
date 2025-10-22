@@ -80,22 +80,22 @@ export default function Navbar() {
     <Disclosure as="nav" className="relative z-50 bg-white backdrop-blur-md  border-b border-gray-200">
       {({ open }) => (
         <>
-          <div className="mx-auto container px-4 sm:px-6 lg:px-8">
-            <div className="relative flex h-20 items-center justify-between">
+          <div className="mx-auto container px-4 sm:px-6 lg:px-4">
+            <div className="relative flex h-20 xl:h-16 2xl:h-20 items-center justify-between">
               
               <Link href="/" className="flex flex-col items-center space-x-3 group">
                 <div className="relative">
                   <Image 
                     src={logo} 
                     alt="Company Logo" 
-                    className="h-20 w-full" 
+                    className="h-20 w-full lg:h-14 xl:h-16 2xl:h-20" 
                   />
                 </div>
               
               </Link>
 
               {/* Desktop */}
-              <div className="hidden lg:flex space-x-5">
+              <div className="hidden lg:flex space-x-5 lg:space-x-2 xl:space-x-3 2xl:space-x-5">
                 {navigation.map((item) => {
                  const isActive = pathname === item.href;
                  if (item.onClick) {

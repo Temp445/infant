@@ -46,15 +46,12 @@ const Testimonial = () => {
   return (
     <section className="bg-white py-24 px-6 md:px-12">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-2xl md:text-4xl font-extrabold text-gray-800 mb-16">
-          What Our{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-br from-orange-500 to-red-500">
-            Clients Say
-          </span>
+        <h2 className="text-2xl md:text-4xl font-semibold font-oswald text-gray-900 mb-16">
+          What Our Clients Say
         </h2>
 
-        <div className="relative bg-white shadow-2xl rounded-3xl border border-orange-200 px-8 md:px-12 py-10 h-80 mx-auto overflow-hidden">
-          <span className="text-5xl text-orange-500 absolute top-3 left-3 select-none">
+        <div className="relative bg-white shadow-2xl rounded-3xl border border-[#384B70] px-8 md:px-12 py-10 h-80 mx-auto overflow-hidden">
+          <span className="text-5xl text-[#1F5A8B] absolute top-3 left-3 select-none">
             <RiDoubleQuotesL />
           </span>
 
@@ -97,7 +94,7 @@ const Testimonial = () => {
               whileTap={{ scale: 0.9 }}
               className={`rounded-full transition-all duration-300 ${
                 index === currentIndex
-                  ? 'bg-orange-500 w-6 h-3'
+                  ? 'bg-[#1F5A8B] w-6 h-3'
                   : 'bg-gray-300 hover:bg-gray-400 w-3 h-3'
               }`}
             />

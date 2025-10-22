@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono ,Oswald} from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from '@/context/AuthContext';
 import BackToTop from "@/components/BackToTop";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const domainUrl = process.env.NEXT_PUBLIC_API_FRONTEND_URL || '';
 
@@ -17,6 +18,12 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+
+})
 
 export const metadata: Metadata = {
   title: "Infant Engineers Pvt Ltd",
@@ -51,12 +58,13 @@ export default function RootLayout({
        <link rel="icon" href="/AceLogo.png" />
        </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} antialiased`}
       >
         <AuthProvider>
           <Navbar/>
         {children}
         <BackToTop/>
+        <WhatsAppButton/>
         <Footer/>
         </AuthProvider>
       </body>

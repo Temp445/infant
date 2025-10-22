@@ -15,8 +15,8 @@ const CompanyOverview = () => (
         transition={{ duration: 0.6 }}
         className="mb-5 md:mb-12"
       >
-        <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 relative inline-block">
-          Company <span className='text-transparent bg-clip-text bg-gradient-to-br from-orange-500 to-red-500'>Overview</span>
+        <h2 className="text-2xl md:text-4xl font-semibold font-oswald text-gray-900 relative inline-block">
+          Company Overview 
         </h2>
       </motion.div>
 
@@ -31,7 +31,7 @@ const CompanyOverview = () => (
           >
             <MdDoubleArrow className="text-gray-700 text-2xl flex-shrink-0 mt-1" />
             <p className="md:text-lg text-gray-700 leading-relaxed">
-              <span className="font-semibold text-orange-600">Infant Engineers Private Limited (IEPL)</span> and its R&D team are strategically 
+              <span className="font-semibold text-[#1F5A8B]">Infant Engineers Private Limited (IEPL)</span> and its R&D team are strategically 
               located at Sipcot Industrial Park, Sriperumbudur, Tamil Nadu, India, close to major automobile manufacturers.
             </p>
           </motion.div>
@@ -57,8 +57,8 @@ const CompanyOverview = () => (
           >
             <MdDoubleArrow className="text-gray-700 text-2xl flex-shrink-0 mt-1" />
             <p className="md:text-lg text-gray-700 leading-relaxed">
-              We are certified with <span className="font-semibold text-orange-600">AS 9100D</span>, 
-              <span className="font-semibold text-orange-600"> ISO 9001:2015</span>, and IATF16949, demonstrating our commitment 
+              We are certified with <span className="font-semibold text-[#1F5A8B]">AS 9100D</span>, 
+              <span className="font-semibold text-[#1F5A8B]"> ISO 9001:2015</span>, and IATF16949, demonstrating our commitment 
               to world-class quality standards.
             </p>
           </motion.div>

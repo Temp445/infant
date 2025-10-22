@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const DemoCard = () => {
   return (
-    <section className="relative bg-gradient-to-br from-orange-50 via-white to-orange-100 py-10 md:py-24 overflow-hidden">
+    <section className="relative bg-white py-10 md:py-24 overflow-hidden">
       <div className="max-w-3xl mx-auto px-4 text-center">
         
         <motion.h2
@@ -14,10 +14,9 @@ const DemoCard = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-xl md:text-4xl font-extrabold text-gray-900 mb-6 leading-snug"
+          className="text-xl md:text-4xl font-semibold font-oswald text-gray-900 mb-6 leading-snug"
         >
-          Contact Us Today{" "}
-          <span className="text-orange-600">for Trusted Automotive Solutions</span>
+          Contact Us Today for Trusted Automotive Solutions
         </motion.h2>
 
         <motion.p
@@ -40,14 +39,14 @@ const DemoCard = () => {
         >
           <Link
             href="/contact"
-            className=" px-5 py-2 md:px-10 md:py-4 bg-orange-600 text-white rounded md:rounded-xl font-semibold shadow-md hover:bg-orange-700 hover:shadow-xl transition transform hover:-translate-y-1 hover:scale-105"
+            className=" px-5 py-2 md:px-10 md:py-4 bg-[#FF0000] text-white rounded md:rounded-xl font-semibold shadow-md hover:bg-[#C40C0C] hover:shadow-xl transition transform hover:-translate-y-1 hover:scale-105"
           >
             Contact Us
           </Link>
 
           <Link
             href="/products"
-            className=" px-5 py-2 md:px-10  md:py-4 rounded md:rounded-xl font-semibold border border-gray-300 text-gray-700 hover:border-orange-600 hover:text-orange-600 transition"
+            className=" px-5 py-2 md:px-10  md:py-4 rounded md:rounded-xl font-semibold border border-gray-300 text-gray-700 hover:border-[#C40C0C] hover:text-[#C40C0C] transition"
           >
             Explore Products
           </Link>

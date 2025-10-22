@@ -28,7 +28,7 @@ const HeroSection = () => {
             initial={{ y: 50, opacity: 0 }} 
             animate={{ y: 0, opacity: 1 }} 
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
+            className="text-4xl sm:text-5xl lg:text-6xl font-semibold font-oswald text-white leading-tight"
           >
             About Us
           </motion.h1>
@@ -50,7 +50,7 @@ const HeroSection = () => {
           >
             <Link
               href="/contact"
-              className="px-6 py-3 rounded-lg bg-orange-600 hover:bg-orange-700 text-white font-bold shadow-lg transition"
+              className="px-6 py-3 rounded-lg bg-[#FF0000] text-white font-bold shadow-lg transition"
             >
               Contact Us
             </Link>
@@ -70,17 +70,17 @@ const HeroSection = () => {
   className="mt-10 lg:mt-0 hidden md:flex flex-wrap justify-center lg:justify-end gap-4 w-full lg:w-auto lg:absolute bottom-5 right-10 "
 >
   <div className="bg-gray-100 p-6 rounded-xl shadow-lg text-center min-w-[110px]">
-    <h3 className="text-orange-600 font-extrabold text-2xl">35+</h3>
+    <h3 className="text-[#1F5A8B] font-extrabold text-2xl">35+</h3>
     <p className="text-gray-800 font-bold text-sm">Years</p>
   </div>
 
   <div className="bg-gray-100 p-6 rounded-xl shadow-lg text-center min-w-[110px]">
-    <h3 className="text-orange-600 font-extrabold text-2xl">120+</h3>
+    <h3 className="text-[#1F5A8B] font-extrabold text-2xl">120+</h3>
     <p className="text-gray-800 font-bold text-sm">Skilled Engineers</p>
   </div>
 
   <div className="bg-gray-100 p-6 rounded-xl shadow-lg text-center min-w-[110px]">
-    <h3 className="text-orange-600 font-extrabold text-2xl">100%</h3>
+    <h3 className="text-[#1F5A8B] font-extrabold text-2xl">100%</h3>
     <p className="text-gray-800 font-bold text-sm">On-Time Delivery</p>
   </div>
 </motion.div>

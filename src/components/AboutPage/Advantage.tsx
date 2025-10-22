@@ -39,8 +39,8 @@ const Advantage = () => (
         transition={{ duration: 0.6 }}
         className="mb-12 text-center"
       >
-        <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 inline-block">
-          Why Partners <span className="text-transparent bg-clip-text bg-gradient-to-br from-orange-500 to-red-500">Trust Us</span>
+        <h2 className="text-2xl md:text-4xl font-semibold font-oswald text-gray-900 inline-block">
+          Why Partners Trust Us 
         </h2>
         <p className="mt-4 text-gray-600 md:text-lg max-w-5xl mx-auto">
           From advanced infrastructure to long-term industry partnerships, explore the advantages that set us apart in precision manufacturing.
@@ -57,7 +57,7 @@ const Advantage = () => (
             className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-200"
           >
             <div className="flex items-center mb-4">
-              <MdCheckCircle className="text-orange-500 text-3xl mr-2 group-hover:scale-110 transition-transform" />
+              <MdCheckCircle className="text-[#1F5A8B] text-3xl mr-2 group-hover:scale-110 transition-transform" />
               <h3 className="text-lg font-bold text-gray-900">{item.title}</h3>
             </div>
             <p className="text-gray-600 leading-relaxed">{item.desc}</p>

@@ -5,11 +5,21 @@
   --foreground: #171717;
 }
 
+:root {
+      --soft-blue: #A7C7E7;
+      --sky-blue: #5DA9E9;
+      --pale-blue: #EAF3FB;
+      --light-gray: #F7F9FC;
+      --text-gray: #444;
+      --hover-glow: rgba(93, 169, 233, 0.4);
+    }
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-oswald: var(--font-oswald)
 }
 
 

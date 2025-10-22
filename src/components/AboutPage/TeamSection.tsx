@@ -40,7 +40,7 @@ const leadershipTeam = [
 
 const TeamSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-orange-100 to-orange-200 overflow-hidden">
+    <section className="relative min-h-screen bg-[#1F5A8B] overflow-hidden">
       <div className="relative z-10 container mx-auto px-4 py-10 xl:py-24">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -50,13 +50,10 @@ const TeamSection = () => {
           className="text-center mb-10 md:mb-20"
         >
           <h3 className="text-2xl md:text-3xl font-black mb-6 text-center mx-auto leading-tight">
-            <span className=" text-black">Leadership </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
-              Excellence
-            </span>
+            <span className=" text-white">Leadership Excellence </span>
           </h3>
 
-          <p className="text-gray-700 md:text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className="text-gray-300 md:text-xl max-w-3xl mx-auto leading-relaxed">
             Combined expertise delivering excellence and innovation in
             automotive engineering.{" "}
           </p>
@@ -136,13 +133,10 @@ const TeamSection = () => {
           className="relative"
         >
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">
-              Complete{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
-                Leadership Team
-              </span>
+            <h2 className="text-2xl md:text-3xl font-black text-white mb-4">
+              Complete Leadership Team
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-white mx-auto rounded-full"></div>
           </div>
 
           <div className="relative group cursor-pointer">

@@ -37,28 +37,19 @@ const ProductSection = () => {
   return (
     <section className="relative container mx-auto px-6 2xl:px-16 mt-6 ">
       <div className="mb-16 text-center">
-        <motion.h2
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="text-2xl md:text-4xl font-extrabold mb-4"
+        <h2
+          className="text-2xl md:text-4xl font-semibold font-oswald mb-4"
         >
-          <span className="text-black">Our</span>{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-red-600">
-            Products
-          </span>
-        </motion.h2>
-        <motion.p
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          Our Products
+        </h2>
+        <p
           className="text-gray-600 text-justify md:text-balance md:text-lg max-w-5xl mx-auto leading-relaxed"
         >
           Discover our range of high-precision turned components, crafted for
           safety-critical applications in brakes, engines, and other industrial
           systems. Every product is engineered to deliver durability, unmatched
           reliability, and peak performance you can trust.
-        </motion.p>
+        </p>
       </div>
 
       {/* Mobile*/}
@@ -101,7 +92,7 @@ const ProductSection = () => {
         {products.slice(0, 8).map((product, idx) => (
           <motion.div
             key={idx}
-            className="relative rounded-2xl overflow-hidden shadow-md bg-white border border-orange-200 p-6 flex flex-col items-center cursor-pointer group"
+            className="relative rounded-2xl overflow-hidden shadow-md bg-white border border-[#C40C0C]/20 p-6 flex flex-col items-center cursor-pointer group"
             onClick={() => router.push("/products")}
             whileHover={{
               y: -12,
@@ -112,7 +103,7 @@ const ProductSection = () => {
           >
             <div
               className="absolute z-10 top-3 right-4 text-3xl font-black text-transparent"
-              style={{ WebkitTextStroke: "2px rgba(194,65,12,0.6)" }}
+              style={{ WebkitTextStroke: "2px rgba(196, 12, 12,0.6)" }}
             >
               #0{idx + 1}
             </div>
@@ -124,24 +115,24 @@ const ProductSection = () => {
               />
             </div>
 
-            <h3 className="text-lg font-semibold text-gray-800 group-hover:text-orange-600 transition">
+            <h3 className="text-lg font-semibold text-gray-800 transition">
               {product.productName}
             </h3>
 
-            <div className="w-12 h-1 mt-4 rounded-full bg-gradient-to-r from-orange-500 to-red-500 group-hover:w-24 group-hover:h-1.5 transition-all duration-300"></div>
+            <div className="w-12 h-1 mt-4 rounded-full bg-[#384B70] group-hover:w-24 group-hover:h-1.5 transition-all duration-300"></div>
           </motion.div>
         ))}
       </div>
 
       <div className="text-center mt-10 flex ">
-        <div className="group relative inline-flex items-center gap-2 md:gap-6 bg-transparent border border-black pl-4 pr-2 md:pl-6 py-3  rounded-full mx-auto  tracking-wider overflow-hidden">
+        <div className="group relative inline-flex items-center gap-2 md:gap-6 bg-transparent border border-black pl-4 pr-1 md:pl-6 py-3  rounded-full mx-auto  tracking-wider overflow-hidden">
           <span className="relative z-10 text-black transition-colors duration-300">
             Discover All Products
           </span>
           <div className="text-center">
             <Link
               href="/products"
-              className=" px-2  md:px-4 py-3 bg-orange-600 text-white rounded-full  transition-colors duration-300"
+              className=" px-2  md:px-4 py-3 bg-[#FF0000] text-white rounded-full  transition-colors duration-300"
             >
               View More
             </Link>
