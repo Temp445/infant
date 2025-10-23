@@ -92,7 +92,7 @@ const ProductSection = () => {
         {products.slice(0, 8).map((product, idx) => (
           <motion.div
             key={idx}
-            className="relative rounded overflow-hidden shadow-md bg-white border border-[#C40C0C]/20 p-6 flex flex-col items-center cursor-pointer group"
+            className="relative rounded overflow-hidden shadow-md bg-white border border-[#1F5A8B]/80 p-6 flex flex-col items-center cursor-pointer group"
             onClick={() => router.push("/products")}
             whileHover={{
               y: -12,
@@ -103,7 +103,7 @@ const ProductSection = () => {
           >
             <div
               className="absolute z-10 top-3 right-4 text-3xl font-black text-transparent"
-              style={{ WebkitTextStroke: "2px rgba(196, 12, 12,0.6)" }}
+              style={{ WebkitTextStroke: "2px rgba(31, 90, 139,0.6)" }}
             >
               #0{idx + 1}
             </div>
@@ -115,7 +115,7 @@ const ProductSection = () => {
               />
             </div>
 
-            <h3 className="text-lg font-semibold font-oswald text-gray-900 transition">
+            <h3 className="text-lg font-semibold font-oswald text-[#1F5A8B] ">
               {product.productName}
             </h3>
 

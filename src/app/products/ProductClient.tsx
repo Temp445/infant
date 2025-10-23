@@ -67,7 +67,7 @@ const Products = () => {
   return (
     <>
       <div className="min-h-auto pb-32 text-white">
-        <div className="relative py-10 md:py-24 overflow-hidden bg-gray-800">
+        <div className="relative py-10 md:py-24 overflow-hidden bg-gray-900">
           <div className="absolute top-0 left-0 text-8xl text-white/20 -translate-x-5 -translate-y-5">
             <FaGear />
           </div>
@@ -93,13 +93,13 @@ const Products = () => {
             </motion.h1>
 
             <motion.p
-              className="md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto font-extralight leading-relaxed text-justify md:text-center"
+              className="md:text-lg text-gray-100 mb-12 max-w-3xl mx-auto font-extralight leading-relaxed text-justify md:text-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
               Discover a wide range of{" "}
-              <span className="font-semibold text-gray-100">
+              <span className="font-semibold text-gray-200">
                 precision-engineered automotive components
               </span>{" "}
               designed for durability, performance, and reliability. Browse our{" "}
@@ -155,7 +155,7 @@ const Products = () => {
                 <motion.div
                   key={product._id}
                   onClick={() => setSelectedProduct(product)}
-                  className="cursor-pointer group relative rounded border-2 border-[#C40C0C]/20 bg-white shadow-md overflow-hidden flex flex-col transform transition-all duration-500 hover:shadow-2xl"
+                  className="cursor-pointer group relative rounded border-2 border-[#1F5A8B]/80 bg-white shadow-md overflow-hidden flex flex-col transform transition-all duration-500 hover:shadow-2xl"
                   variants={cardVariants}
                   initial="hidden"
                   animate="visible"
@@ -176,12 +176,12 @@ const Products = () => {
                     )}
                   </div>
                   <div className="relative w-full h-2 flex items-center">
-                    <div className="w-1/2 h-0.5 bg-gradient-to-r from-[#C40C0C]/20 to-transparent"></div>
-                    <div className="w-1/2 h-0.5 bg-gradient-to-l from-[#C40C0C]/20 to-transparent"></div>
+                    <div className="w-1/2 h-0.5 bg-gradient-to-r from-[#1F5A8B]/50 to-transparent"></div>
+                    <div className="w-1/2 h-0.5 bg-gradient-to-l from-[#1F5A8B]/50 to-transparent"></div>
                   </div>
 
                   <div className="flex-1 flex flex-col p-2 pt-3 relative z-10">
-                    <h3 className="text-lg 2xl:text-xl font-semibold font-oswald text-gray-900 text-center mb-3">
+                    <h3 className="text-lg 2xl:text-xl font-semibold font-oswald text-[#1F5A8B] text-center mb-3">
                       {product.productName}
                     </h3>
                   </div>
