@@ -55,7 +55,7 @@ export default function Navbar() {
 
   const navigation: NavigationItem[] = useMemo(() => {
     const items: NavigationItem[] = [
-      {name: 'Home', href:'/'},
+      { name: 'Home', href: '/' },
       { name: 'About', href: '/about' },
       { name: 'Products', href: '/products' },
       { name: 'Contact Us', href: '/contact' },
@@ -77,62 +77,59 @@ export default function Navbar() {
   }, [userRole, isAuthenticated])
 
   return (
-    <Disclosure as="nav" className="relative z-50 bg-white backdrop-blur-md  border-b border-gray-200">
-      {({ open }) => (
+    <Disclosure as="nav" className="relative z-50 bg-white backdrop-blur-md border-b border-gray-200">
+      {({ open, close }) => ( 
         <>
           <div className="mx-auto container px-4 sm:px-6 lg:px-4">
             <div className="relative flex h-20 xl:h-16 2xl:h-20 items-center justify-between">
-              
               <Link href="/" className="flex flex-col items-center space-x-3 group">
                 <div className="relative">
-                  <Image 
-                    src={logo} 
-                    alt="Company Logo" 
-                    className="h-20 w-full lg:h-14 xl:h-16 2xl:h-20" 
+                  <Image
+                    src={logo}
+                    alt="Company Logo"
+                    className="h-20 w-full lg:h-14 xl:h-16 2xl:h-20"
                   />
                 </div>
-              
               </Link>
 
               {/* Desktop */}
               <div className="hidden lg:flex space-x-5 lg:space-x-2 xl:space-x-3 2xl:space-x-5">
                 {navigation.map((item) => {
-                 const isActive = pathname === item.href;
-                 if (item.onClick) {
-                   return (
-                     <button
-                       key={item.name}
-                       onClick={item.onClick}
-                       className={classNames(
-                         'px-4 py-2 text-sm font-medium rounded-md transition-all duration-300',
-                         'text-gray-700 hover:bg-[#B71C1C]/70 hover:text-white hover:scale-105 -mt-1  px-4',
-                         item.name !== "Logout" ? 'bg-[#B71C1C] text-white font-semibold' : ''
-                       )}
-                     >
-                       {item.name}
-                     </button>
-                   )
-                 } else {
-                   return (
-                     <Link
-                       key={item.name}
-                       href={item.href}
-                       className={classNames(
-                         'relative px-3 py-1.5 text-sm font-medium transition-all duration-300',
-                         isActive
+                  const isActive = pathname === item.href
+                  if (item.onClick) {
+                    return (
+                      <button
+                        key={item.name}
+                        onClick={item.onClick}
+                        className={classNames(
+                          'px-4 py-2 text-sm font-medium rounded-md transition-all duration-300',
+                          'text-gray-700 hover:bg-[#B71C1C]/70 hover:text-white hover:scale-105 -mt-1  px-4',
+                          item.name !== "Logout" ? 'bg-[#B71C1C] text-white font-semibold' : ''
+                        )}
+                      >
+                        {item.name}
+                      </button>
+                    )
+                  } else {
+                    return (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          'relative px-3 py-1.5 text-sm font-medium transition-all duration-300',
+                          isActive
                             ? 'bg-[#B71C1C] text-white font-semibold rounded'
                             : 'text-gray-700 hover:text-white hover:bg-[#B71C1C]/70 rounded'
-                       )}
-                     >
-                       {item.name}
-                     </Link>
-                   )
-                 }
-               })}
-
+                        )}
+                      >
+                        {item.name}
+                      </Link>
+                    )
+                  }
+                })}
               </div>
 
-              {/* Mobile menu*/}
+              {/* Mobile menu */}
               <div className="flex items-center lg:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-500 hover:bg-gray-100 hover:text-[#B71C1C] focus:outline-none focus:ring-2 focus:ring-[#B71C1C] transition-colors duration-200">
                   <span className="sr-only">Open main menu</span>
@@ -146,40 +143,47 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Mobile*/}
-         <Disclosure.Panel className="absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-200 z-10 transition-all duration-300">
-  <div className="space-y-1 px-4 pt-2 pb-4">
-    {navigation.map((item) => {
-      const isActive = pathname === item.href
-      return item.onClick ? (
-        <button
-          key={item.name}
-          onClick={item.onClick}
-          className={classNames(
-            'block w-full text-left rounded-lg px-4 py-3 text-base font-medium transition-all duration-200',
-            'text-gray-700 hover:text-[#B71C1C] hover:bg-[#B71C1C]/10'
-          )}
-        >
-          {item.name}
-        </button>
-      ) : (
-        <Link
-          key={item.name}
-          href={item.href}
-          className={classNames(
-            'block rounded-lg px-4 py-3 text-base font-medium transition-all duration-200',
-            isActive 
-              ? 'text-[#B71C1C] font-semibold bg-[#B71C1C]/10 border-l-4 border-[#B71C1C]' 
-              : 'text-gray-700 hover:text-[#B71C1C] hover:bg-[#B71C1C]/10'
-          )}
-        >
-          {item.name}
-        </Link>
-      )
-    })}
-  </div>
-</Disclosure.Panel>
+          <Disclosure.Panel className="absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-200 z-10 transition-all duration-300">
+            <div className="space-y-1 px-4 pt-2 pb-4">
+              {navigation.map((item) => {
+                const isActive = pathname === item.href
 
+                if (item.onClick) {
+                  return (
+                    <button
+                      key={item.name}
+                      onClick={() => {
+                        item.onClick?.()
+                        close() 
+                      }}
+                      className={classNames(
+                        'block w-full text-left rounded-lg px-4 py-3 text-base font-medium transition-all duration-200',
+                        'text-gray-700 hover:text-[#B71C1C] hover:bg-[#B71C1C]/10'
+                      )}
+                    >
+                      {item.name}
+                    </button>
+                  )
+                }
+
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => close()} 
+                    className={classNames(
+                      'block rounded-lg px-4 py-3 text-base font-medium transition-all duration-200',
+                      isActive
+                        ? 'text-[#B71C1C] font-semibold bg-[#B71C1C]/10 border-l-4 border-[#B71C1C]'
+                        : 'text-gray-700 hover:text-[#B71C1C] hover:bg-[#B71C1C]/10'
+                    )}
+                  >
+                    {item.name}
+                  </Link>
+                )
+              })}
+            </div>
+          </Disclosure.Panel>
         </>
       )}
     </Disclosure>
