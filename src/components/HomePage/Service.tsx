@@ -58,7 +58,7 @@ const Service = () => {
                   alt={service.title}
                   className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-[#FF0000]/80 px-3 py-1 rounded-full text-sm font-semibold shadow-md">
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-gray-900 px-3 py-1 rounded-full text-sm font-semibold shadow-md">
                   0{service.id}
                 </div>
               </div>
@@ -72,7 +72,7 @@ const Service = () => {
                 </p>
               </div>
 
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-red-600/10 to-red-600/10 rounded-bl-full"></div>
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#1F5A8B]/30 rounded-bl-full"></div>
             </div>
           ))}
         </div>
