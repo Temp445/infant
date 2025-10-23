@@ -110,10 +110,10 @@ const Footer = () => {
           
         </div>
 
-          <div className=" w-full md:w-60 lg:w-80 h-46 rounded-lg overflow-hidden border border-gray-700 lg:hidden 2xl:block">
+          <div className=" w-full md:w-60 lg:w-80 h-52 rounded-lg overflow-hidden border border-gray-700 lg:hidden 2xl:block">
             <iframe
               title="Infant Engineers Location"
-             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15546.402389406661!2d80.215027!3d13.061076!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266947093a395%3A0x10b037f79c6e698f!2sBrindavanam%20Apartments!5e0!3m2!1sen!2sus!4v1755847210839!5m2!1sen!2sus"
+             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6391130167176!2d80.02320207575586!3d12.994918914365226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528b46769a7ed1%3A0xfee32526eba892ca!2sInfant%20Engineers%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1761215323358!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -122,6 +122,7 @@ const Footer = () => {
             ></iframe>
           </div>
       </div>
+      
 
       <div className="border-t border-gray-700 mt-8 py-4 text-center text-sm text-gray-400">
         © 2025 Infant Engineers Pvt Ltd. All rights reserved.
