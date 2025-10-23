@@ -21,13 +21,13 @@ const Sidebar = () => {
     <>
       {/* Desktop*/}
       <aside className="hidden md:block w-64 bg-white shadow-lg p-6">
-        <h2 className="text-2xl font-bold text-orange-600 mb-8">Admin Panel</h2>
+        <h2 className="text-2xl font-bold text-[#B71C1C] mb-8">Admin Panel</h2>
         <nav className="space-y-4">
           {navItems.map((item) => (
             <button
               key={item.label}
               onClick={() => router.push(item.href)}
-              className="flex items-center gap-3 px-3 py-2 rounded-lg w-full text-left font-medium hover:bg-orange-100 hover:text-orange-600"
+              className="flex items-center gap-3 px-3 py-2 rounded-lg w-full text-left font-medium hover:bg-red-50 hover:text-[#B71C1C]"
             >
               {item.icon} {item.label}
             </button>
@@ -37,7 +37,7 @@ const Sidebar = () => {
 
       <div className="md:hidden bg-white shadow-lg p-4 absolute rounded-br-2xl z-10">
         <div className="flex justify-between items-center">
-          <h2 className="text-xl font-bold text-orange-600">Admin</h2>
+          <h2 className="text-xl font-bold text-[#B71C1C]">Admin</h2>
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -52,7 +52,7 @@ const Sidebar = () => {
                   router.push(item.href);
                   setIsOpen(false);
                 }}
-                className="flex items-center gap-3 px-3 py-2 rounded-lg w-full text-left font-medium hover:bg-orange-100 hover:text-orange-600"
+                className="flex items-center gap-3 px-3 py-2 rounded-lg w-full text-left font-medium hover:bg-[#B71C1C]/20 hover:text-[#B71C1C]"
               >
                 {item.icon} {item.label}
               </button>

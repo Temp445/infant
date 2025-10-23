@@ -70,7 +70,7 @@ const MachineryUpload = () => {
                 type="text"
                 value={machineryName}
                 onChange={(e) => setMachineryName(e.target.value)}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-400 focus:outline-none"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1F5A8B] focus:outline-none"
                 placeholder="Enter machinery name"
                 required
               />
@@ -85,7 +85,7 @@ const MachineryUpload = () => {
                 multiple
                 accept="image/*"
                 onChange={handleImageChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#1F5A8B]"
               />
               {previewImages.length > 0 && (
                 <div className="flex gap-4 mt-4 flex-wrap">
@@ -110,7 +110,7 @@ const MachineryUpload = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition font-semibold shadow-md"
+                className="bg-[#1F5A8B] text-white px-6 py-3 rounded-lg hover:bg-emerald-600 transition font-semibold shadow-md"
               >
                 {loading ? 'Uploading...' : 'Upload Machinery'}
               </button>

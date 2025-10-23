@@ -31,7 +31,7 @@ const ProtectedRoute = ({ children }: AdminProtectedRouteProps) => {
              <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100">
         <div className="flex flex-col items-center justify-center min-h-screen">
           <div className="relative">
-            <div className="w-16 h-16 border-4 border-blue-200 border-t-orange-600 rounded-full animate-spin"></div>
+            <div className="w-16 h-16 border-4 border-blue-200 border-t-[#B71C1C] rounded-full animate-spin"></div>
           </div>
         </div>
       </div>
@@ -61,8 +61,8 @@ const ProtectedRoute = ({ children }: AdminProtectedRouteProps) => {
         You don't have permission to view this page. Only site administrators can access this area.
       </p>
 
-      <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 mb-8">
-        <p className="text-sm text-orange-800">
+      <div className="bg-[#B71C1C]/20 border border-[#B71C1C] rounded-xl p-4 mb-8">
+        <p className="text-sm text-[#B71C1C]">
           <strong>Need access?</strong> Contact your system administrator.
         </p>
       </div>
@@ -70,7 +70,7 @@ const ProtectedRoute = ({ children }: AdminProtectedRouteProps) => {
       <div className="flex flex-col sm:flex-row gap-3 justify-center">
         <button
           onClick={() => router.push('/')}
-          className="group relative px-8 py-3 text-black border hover:border-0  hover:bg-orange-600 hover:text-white rounded font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2"
+          className="group relative px-8 py-3 text-black border hover:border-0  hover:bg-[#1F5A8B] hover:text-white rounded font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />

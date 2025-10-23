@@ -43,7 +43,7 @@ const ProductSection = () => {
           Our Products
         </h2>
         <p
-          className="text-gray-600 text-justify md:text-balance md:text-lg max-w-5xl mx-auto leading-relaxed"
+          className="text-gray-600 text-justify md:text-center md:text-lg max-w-5xl mx-auto leading-relaxed"
         >
           Discover our range of high-precision turned components, crafted for
           safety-critical applications in brakes, engines, and other industrial
@@ -69,7 +69,7 @@ const ProductSection = () => {
           {products.slice(0, 8).map((product, idx) => (
             <div
               key={idx}
-              className="flex-shrink-0 w-72 bg-white rounded-2xl border border-orange-200 shadow-md p-4 flex flex-col items-center cursor-pointer hover:shadow-lg transition"
+              className="flex-shrink-0 w-72 bg-white rounded-2xl border border-[#C40C0C]/20 shadow-md p-4 flex flex-col items-center cursor-pointer hover:shadow-lg transition"
               onClick={() => router.push("/products")}
             >
               <div className="w- h relative mb-4">
@@ -92,7 +92,7 @@ const ProductSection = () => {
         {products.slice(0, 8).map((product, idx) => (
           <motion.div
             key={idx}
-            className="relative rounded-2xl overflow-hidden shadow-md bg-white border border-[#C40C0C]/20 p-6 flex flex-col items-center cursor-pointer group"
+            className="relative rounded overflow-hidden shadow-md bg-white border border-[#C40C0C]/20 p-6 flex flex-col items-center cursor-pointer group"
             onClick={() => router.push("/products")}
             whileHover={{
               y: -12,
@@ -115,11 +115,10 @@ const ProductSection = () => {
               />
             </div>
 
-            <h3 className="text-lg font-semibold text-gray-800 transition">
+            <h3 className="text-lg font-semibold font-oswald text-gray-900 transition">
               {product.productName}
             </h3>
 
-            <div className="w-12 h-1 mt-4 rounded-full bg-[#384B70] group-hover:w-24 group-hover:h-1.5 transition-all duration-300"></div>
           </motion.div>
         ))}
       </div>

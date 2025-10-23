@@ -20,16 +20,16 @@ const Footer = () => {
 
                 
           <div className="flex gap-4 mt-4">
-            <Link href="#" className="hover:text-orange-500 transition-colors">
+            <Link href="#">
               <Facebook className="w-7 h-7" />
             </Link>
-            <Link href="#" className="hover:text-orange-500 transition-colors mt-1">
+            <Link href="#" className="mt-1">
               <BsTwitterX  className="text-xl" />
             </Link>
-            <Link href="#" className="hover:text-orange-500 transition-colors">
+            <Link href="#">
               <Linkedin className="w-7 h-7" />
             </Link>
-            <Link href="#" className="hover:text-orange-500 transition-colors">
+            <Link href="#">
               <Youtube className="w-7 h-8" />
             </Link>
           </div>
@@ -40,27 +40,27 @@ const Footer = () => {
           <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
           <ul className="space-y-2">
             <li>
-              <Link href="/" className="hover:text-orange-500 transition-colors">
+              <Link href="/" className="hover:underline">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-orange-500 transition-colors">
+              <Link href="/about" className="hover:underline">
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="/products" className="hover:text-orange-500 transition-colors">
+              <Link href="/products" className="hover:underline">
                 Products
               </Link>
             </li>
             <li>
-              <Link href="/machinery" className="hover:text-orange-500 transition-colors">
+              <Link href="/machinery" className="hover:underline">
                 Our Machinery
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-orange-500 transition-colors">
+              <Link href="/contact" className="hover:underline">
                 Contact Us
               </Link>
             </li>
@@ -72,12 +72,12 @@ const Footer = () => {
           <ul className="space-y-3 mb-4 lg:w-72 xl:w-auto max-w-sm">
 
                <li className="flex items-center gap-3">
-              <FaLocationDot  className="w-11 h-10 text-orange-600 -mt-10 text-sm" />
+              <FaLocationDot  className="w-11 h-10 text-white -mt-10 text-sm" />
               <span>Factory no: F-43 Sipcot Industrial Park, Katrambakkam, sriperumbudur Taluk, Kanchipuram Dist, Tamil nadu - 602 105.</span>
             </li>
             
             <li className="flex items-center gap-3">
-              <Phone className="w-5 h-5  -mt-5 text-orange-500" />
+              <Phone className="w-5 h-5  -mt-5 text-white" />
               <div className="flex flex-col">
                   <a href="tel:+919701946123" className="font-medium">
                     +91 9701946123
@@ -89,7 +89,7 @@ const Footer = () => {
 
             </li>
             <li className="flex items-center gap-3">
-              <Mail className="w-5 h-5 -mt-5 text-orange-500" />
+              <Mail className="w-5 h-5 -mt-5 text-white" />
               <div>
                   <a
                     href="mailto:abishek@infantengineers.in"

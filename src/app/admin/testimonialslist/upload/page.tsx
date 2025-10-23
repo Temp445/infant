@@ -118,7 +118,7 @@ const TestimonialUpload = () => {
 
         <button
           type="submit"
-          className="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600"
+          className="w-full bg-[#1F5A8B] text-white py-2 rounded-lg hover:bg-emerald-600"
         >
           Upload
         </button>

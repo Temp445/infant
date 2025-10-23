@@ -9,11 +9,11 @@ import image5 from "@/assets/Image5.jpg";
 
 const ShopFloor = () => {
   return (
-    <section className="py-16 bg-orange-100">
+    <section className="py-16 bg-[#F8F7F3]">
       <div className="container mx-auto">
            <div className=" mb-12 lg:px-10">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 text-center md:text-left">
-          Shop <span className="text-transparent bg-clip-text bg-gradient-to-br from-orange-500 to-red-500">Floor</span>
+        <h2 className="text-3xl md:text-4xl font-semibold font-oswald text-gray-900 text-center md:text-left">
+          Shop Floor
         </h2>
       </div>
 

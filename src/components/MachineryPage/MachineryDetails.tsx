@@ -38,26 +38,31 @@ const MachineryDetails: React.FC = () => {
 
   return (
     <div className="py-12 px-4 lg:px-10 container mx-auto">
-      <h2 className="text-2xl md:text-4xl font-bold text-center lg:text-left mb-10 text-gray-900 tracking-wide">
-        Machinery{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-br from-orange-500 to-red-500">
-          Details
-        </span>
+      <h2 className="text-2xl md:text-4xl font-semibold font-oswald text-center lg:text-left mb-10 text-gray-900 tracking-wide">
+        Machinery Details
       </h2>
 
       {loading ? (
-        <p className="text-center text-gray-500">Loading machinery details...</p>
+        <p className="text-center text-gray-500">
+          Loading machinery details...
+        </p>
       ) : error ? (
         <p className="text-center text-red-500">{error}</p>
       ) : machines.length === 0 ? (
-        <p className="text-center text-gray-500">No machinery details available.</p>
+        <p className="text-center text-gray-500">
+          No machinery details available.
+        </p>
       ) : (
         <div className="overflow-x-auto mx-auto rounded-xl shadow-xl border border-gray-200">
           <table className="w-full text-left border-collapse">
-            <thead className="bg-gradient-to-r from-orange-400 via-orange-500 to-red-400 text-white shadow-md">
+            <thead className="bg-[#B71C1C] text-white shadow-md">
               <tr>
-                <th className="px-6 py-4 border-r border-orange-300 font-semibold">No</th>
-                <th className="px-6 py-4 border-r border-orange-300 font-semibold">Machine Detail</th>
+                <th className="px-6 py-4 border-r border-white font-semibold">
+                  No
+                </th>
+                <th className="px-6 py-4 border-r border-white font-semibold">
+                  Machine Detail
+                </th>
                 <th className="px-6 py-4 font-semibold">No. of Machines</th>
               </tr>
             </thead>
@@ -66,8 +71,8 @@ const MachineryDetails: React.FC = () => {
                 <tr
                   key={machine._id || index}
                   className={`transition duration-200 ${
-                    index % 2 === 0 ? "bg-white" : "bg-orange-50"
-                  } hover:bg-orange-100`}
+                    index % 2 === 0 ? "bg-white" : "bg-gray-300"
+                  } hover:bg-[#B71C1C]/20`}
                 >
                   <td className="px-6 py-4 font-medium text-gray-800 border-r border-gray-200">
                     {index + 1}
@@ -75,7 +80,9 @@ const MachineryDetails: React.FC = () => {
                   <td className="px-6 py-4 text-gray-700 border-r border-gray-200">
                     {machine.machineName}
                   </td>
-                  <td className="px-6 py-4 text-gray-900 font-semibold">{machine.count}</td>
+                  <td className="px-6 py-4 text-gray-900 font-semibold">
+                    {machine.count}
+                  </td>
                 </tr>
               ))}
             </tbody>

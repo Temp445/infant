@@ -60,7 +60,7 @@ const Admin = () => {
             </div>
             <button
               onClick={() => router.push("/admin/productupload")}
-              className="group relative border text-orange-600 px-8 py-2 rounded font-bold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+              className="group relative border text-[#B71C1C] px-8 py-2 rounded font-bold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 overflow-hidden"
             >
               <span className="relative flex items-center gap-2">
                 Add New Product
@@ -71,7 +71,7 @@ const Admin = () => {
           {loading ? (
            <div className="flex flex-col items-center justify-center min-h-[50vh]">
           <div className="relative">
-            <div className="w-16 h-16 border-4 border-blue-200 border-t-orange-600 rounded-full animate-spin"></div>
+            <div className="w-16 h-16 border-4 border-blue-200 border-t-[#B71C1C] rounded-full animate-spin"></div>
           </div>
           <p className="mt-4 text-lg font-medium text-gray-600">Loading Products...</p>
         </div>

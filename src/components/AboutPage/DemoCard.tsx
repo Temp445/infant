@@ -39,14 +39,14 @@ const DemoCard = () => {
         >
           <Link
             href="/contact"
-            className=" px-5 py-2 md:px-10 md:py-4 bg-[#FF0000] text-white rounded md:rounded-xl font-semibold shadow-md hover:bg-[#C40C0C] hover:shadow-xl transition transform hover:-translate-y-1 hover:scale-105"
+            className=" px-5 py-2 md:px-10 md:py-4 bg-[#B71C1C] text-white rounded font-semibold shadow-md hover:bg-[#C40C0C] hover:shadow-xl transition transform hover:-translate-y-1 hover:scale-105"
           >
             Contact Us
           </Link>
 
           <Link
             href="/products"
-            className=" px-5 py-2 md:px-10  md:py-4 rounded md:rounded-xl font-semibold border border-gray-300 text-gray-700 hover:border-[#C40C0C] hover:text-[#C40C0C] transition"
+            className=" px-5 py-2 md:px-10  md:py-4 rounded font-semibold border border-gray-700 text-gray-700 hover:border-[#C40C0C] hover:text-[#C40C0C] transition"
           >
             Explore Products
           </Link>

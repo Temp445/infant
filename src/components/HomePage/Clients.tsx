@@ -31,17 +31,17 @@ const Clients = () => {
   }, []);
 
   return (
-    <section className="relative py-20 bg-[#1F5A8B]">
+    <section className="relative py-20 bg-[#EAEAEA]">
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center mb-14">
-          <h2 className="text-sm font-semibold tracking-widest text-white uppercase flex items-center gap-2">
-            <span className="w-8 h-0.5 bg-white"></span>
+          <h2 className="text-sm font-semibold tracking-widest text-[#B71C1C] uppercase flex items-center gap-2">
+            <span className="w-8 h-0.5 bg-[#B71C1C]"></span>
             Trusted Clients
           </h2>
-          <h3 className="mt-4 text-3xl md:text-4xl font-bold text-white text-center">
+          <h3 className="mt-4 text-2xl md:text-4xl font-bold text-gray-900 text-center">
             Clients We Work With
           </h3>
-          <p className="mt-4 text-gray-300 text-lg max-w-2xl text-center">
+          <p className="mt-4 text-gray-700 md:text-lg max-w-2xl text-center">
             From startups to enterprises, we partner with organizations of all
             sizes to help them achieve their goals.
           </p>

@@ -29,13 +29,11 @@ export const metadata: Metadata = {
 const Services = () => {
   return (
     <>
-      <section className="relative w-full bg-gradient-to-br from-gray-900 via-gray-900 to-gray-900 text-white overflow-hidden">
+      <section className="relative w-full bg-gray-900 text-white overflow-hidden">
         <div className="container mx-auto flex flex-col items-center justify-center px-6 lg:px-16 py-20 md:py-20 text-center relative z-10">
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-            Driving Excellence with{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-              Cutting-Edge Services
-            </span>
+          <h1 className="text-3xl md:text-5xl font-semibold font-oswald leading-tight mb-6">
+            Driving Excellence with Cutting-Edge Services
+          
           </h1>
           <p className="md:text-xl text-gray-300 max-w-4xl mx-auto mb-10">
             We specialize in delivering{" "}

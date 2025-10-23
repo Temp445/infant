@@ -39,7 +39,7 @@ const whyChooseUs = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="relative bg-white py-5 md:py-10 px-6 2xl:px-16 container mx-auto">
+    <section className="relative bg-white py-5 md:py-10 px-4 md:px-6 2xl:px-16 container mx-auto">
       <div className=" mb-16">
         <h2
          className="text-2xl md:text-4xl font-semibold font-oswald mb-4">
@@ -54,7 +54,7 @@ const WhyChooseUs = () => {
         {whyChooseUs.map((item, index) => (
           <div
             key={index}
-            className="group relative bg-white/70 backdrop-blur-lg border border-[#384B70] p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+            className="group relative bg-white/70 backdrop-blur-lg border border-[#384B70] p-8 rounded shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
           >
             
             <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[#1F5A8B] mb-5 shadow-md group-hover:scale-110 transition-transform duration-300">

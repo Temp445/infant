@@ -81,7 +81,7 @@ const Users = () => {
           </h1>
 
           <table className="min-w-full border rounded-lg overflow-hidden shadow-md">
-            <thead className="bg-gradient-to-r from-orange-300 to-red-200">
+            <thead className="bg-[#1F5A8B] to-red-200">
               <tr>
                 <th className="hidden md:flex px-6 py-3 text-left text-black font-medium uppercase text-sm">
                   Name
@@ -115,7 +115,7 @@ const Users = () => {
                       <span
                         className={`px-3 py-1 text-sm font-semibold rounded ${
                           user.role === 'ADMIN'
-                            ? 'border text-orange-600'
+                            ? 'border text-[#B71C1C]'
                             : 'border text-gray-800'
                         }`}
                       >

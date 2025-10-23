@@ -138,10 +138,10 @@ const Contact = () => {
 
   return (
     <>
-      <div className="min-h-auto pb-20 bg-gradient-to-b from-orange-100 via-white to-orange-50">
+      <div className="min-h-auto pb-20 bg-white">
 
         <div className="bg-black/95 py-20 text-center text-white relative">
-          <p className="text-3xl md:text-4xl font-extrabold">Contact <span className="text-orange-600">Us</span></p>
+          <p className="text-3xl md:text-4xl font-semibold font-oswald">Contact Us</p>
           <h1 className="mt-4 md:text-xl lg:text-2xl font-medium max-w-3xl mx-auto">
             Let’s Build the Future of Manufacturing Together – Get in Touch Today
           </h1>
@@ -149,9 +149,9 @@ const Contact = () => {
 
         <div className="container mx-auto px-4 md:px-8 py-16 grid lg:grid-cols-3 gap-10">
           
-          <div className="lg:col-span-2 bg-white shadow-xl rounded-2xl p-6 md:p-10 border border-orange-200">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
-              Product <span className="text-orange-600">Enquiry</span>
+          <div className="lg:col-span-2 bg-white shadow-xl rounded-2xl p-6 md:p-10 border border-gray-100">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-900">
+              Product Enquiry
             </h2>
 
             <form ref={form} onSubmit={handleSubmit} className="space-y-5">
@@ -162,7 +162,7 @@ const Contact = () => {
                   name="Name"
                   placeholder="Enter your name *"
                   required
-                  className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                  className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#1F5A8B] focus:outline-none"
                 />
               </div>
 
@@ -173,7 +173,7 @@ const Contact = () => {
                   name="company"
                   placeholder="Enter your company name *"
                   required
-                  className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                  className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#1F5A8B] focus:outline-none"
                 />
               </div>
 
@@ -186,7 +186,7 @@ const Contact = () => {
                   placeholder="Enter your email *"
                   onChange={(e) => setEmail(e.target.value.trim())}
                   required
-                  className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                  className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#1F5A8B] focus:outline-none"
                 />
                 {emailError && (
                   <p id="email-error" className="text-red-500 text-sm mt-1">
@@ -214,7 +214,7 @@ const Contact = () => {
                   name="location"
                   placeholder="Enter your location *"
                   required
-                  className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                  className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#1F5A8B] focus:outline-none"
                 />
               </div>
 
@@ -225,7 +225,7 @@ const Contact = () => {
                   name="product"
                   placeholder="Enter the product"
                   required
-                  className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                  className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#1F5A8B] focus:outline-none"
                 />
               </div>
 
@@ -236,14 +236,14 @@ const Contact = () => {
                   placeholder="Enter your queries"
                   rows={5}
                   required
-                  className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                  className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#1F5A8B] focus:outline-none"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-orange-600 text-white py-3 rounded-lg hover:bg-orange-700 transition-colors font-semibold"
+                className="w-full bg-[#1F5A8B] text-white py-3 rounded-lg hover:bg-emerald-700 transition-colors font-semibold"
               >
                 {loading ? "Submitting..." : "Submit"}
               </button>
@@ -252,19 +252,19 @@ const Contact = () => {
 
 
           <div className="flex flex-col gap-6">
-            <div className="bg-white shadow-lg rounded-xl p-6 border-l-4 border-orange-500">
+            <div className="bg-white shadow-lg rounded-xl p-6 border-l-4 border-[#B71C1C]">
               <h3 className="font-semibold text-lg mb-2 flex gap-2"><span><Mails className="w-6 h-6 text-red-500"/></span> Email</h3>
               <a href="mailto:abishek@infantengineers.in" className="text-gray-700">abishek@infantengineers.in</a>
               <a href="mailto:rajasekaran@infantengineers.in" className="text-gray-700">rajasekaran@infantengineers.in</a>
             </div>
 
-            <div className="bg-white shadow-lg rounded-xl p-6 border-l-4 border-orange-500">
+            <div className="bg-white shadow-lg rounded-xl p-6 border-l-4 border-[#B71C1C]">
               <h3 className="font-semibold text-lg mb-2 flex gap-2"><span><PhoneCall className="w-5 h-5 text-blue-800 mt-1"/></span> Phone</h3>
               <a href="tel:+919701946123" className="text-gray-700">+91 9701946123</a>
               <a href="tel:+919841706116" className="text-gray-700">+91 9841706116</a>
             </div>
 
-            <div className="bg-white shadow-lg rounded-xl p-6 border-l-4 border-orange-500">
+            <div className="bg-white shadow-lg rounded-xl p-6 border-l-4 border-[#B71C1C]">
               <h3 className="font-semibold text-lg mb-2 flex gap-2"><span><MapPin/> </span> Location</h3>
               <p className="text-sm text-gray-700">
                 Factory no: F-43 Sipcot Industrial Park, Katrambakkam, Sriperumbudur Taluk,  
@@ -272,7 +272,7 @@ const Contact = () => {
               </p>
             </div>
                <div className="container mx-auto px-6 py-10 flex justify-center">
-          <div className="bg-white border border-orange-500 border-x-4 shadow-lg rounded-xl py-3 px-6 flex gap-8">
+          <div className="bg-white border border-[#B71C1C] border-x-4 shadow-lg rounded-xl py-3 px-6 flex gap-8">
             <Link href="#" className="text-blue-600">
               <Facebook size={28} />
             </Link>

@@ -51,7 +51,7 @@ const ProductUpload = () => {
       <div className="flex-1 flex mt-[10vh] h-fit justify-center">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-lg p-6 bg-white border border-orange-300 shadow-lg rounded-xl space-y-6"
+        className="w-full max-w-lg p-6 bg-white border border-gray-200 shadow-lg rounded-xl space-y-6"
       >
         <h2 className="text-2xl font-bold text-gray-800 text-center">
           Upload Product
@@ -65,7 +65,7 @@ const ProductUpload = () => {
             type="text"
             value={productName}
             onChange={(e) => setProductName(e.target.value)}
-            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-500 focus:outline-none"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#1F5A8B] focus:outline-none"
             placeholder="Enter product name"
             required
           />
@@ -101,7 +101,7 @@ const ProductUpload = () => {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-orange-600 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 transition"
+          className="w-full bg-[#1F5A8B] text-white py-3 rounded-lg font-semibold hover:bg-emerald-600 transition"
         >
           {loading ? "Uploading..." : "Upload Product"}
         </button>

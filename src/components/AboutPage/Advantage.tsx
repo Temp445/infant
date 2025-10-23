@@ -54,7 +54,7 @@ const Advantage = () => (
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-            className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-200"
+            className="group bg-white rounded p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-[#1F5A8B]"
           >
             <div className="flex items-center mb-4">
               <MdCheckCircle className="text-[#1F5A8B] text-3xl mr-2 group-hover:scale-110 transition-transform" />

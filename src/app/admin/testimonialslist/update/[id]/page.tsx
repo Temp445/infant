@@ -151,7 +151,7 @@ const TestimonialUpdate = () => {
 
         <button
           type="submit"
-          className="w-full bg-orange-600 text-white py-2 rounded-lg"
+          className="w-full bg-[#1F5A8B] text-white py-2 rounded-lg"
         >
           Update
         </button>

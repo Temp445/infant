@@ -3,14 +3,14 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Image1 from "@/assets/bg1.png";
+import Image1 from "@/assets/heroimg.png";
 import Link from "next/link";
 
 const HeroSection = () => {
   return (
 <section className="relative overflow-hidden">
   <div className="container relative z-10 mx-auto flex flex-col md:flex-row lg:items-center gap-5 2xl:pl-12">
-    <div className="w-full text-left space-y-4 lg:space-y-6 px-4 order-2 md:order-1">
+    <div className="w-full text-left space-y-4 lg:space-y-6 md:mt-6  px-4 order-2 md:order-1">
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -46,13 +46,13 @@ const HeroSection = () => {
       >
         <Link
           href="/contact"
-          className="px-6 py-3 lg:text-lg font-semibold text-white bg-[#FF0000] hover:bg-[#C40C0C] rounded-full shadow-lg transition-all duration-300"
+          className="px-6 py-3 lg:text-lg font-semibold text-white bg-[#B71C1C] hover:bg-[#D32F2F] rounded shadow-lg transition-all duration-300"
         >
           Contact Us
         </Link>
         <Link
           href="/products"
-          className="px-6 py-3 lg:text-lg font-semibold border border-gray-700 text-gray-800 rounded-full shadow transition-all duration-300"
+          className="px-6 py-3 lg:text-lg font-semibold border border-gray-700 text-gray-800 rounded shadow transition-all duration-300"
         >
           Our Products
         </Link>
@@ -68,7 +68,7 @@ const HeroSection = () => {
       >
         <Image
           src={Image1}
-          alt="Industrial Components"
+          alt="Infant Engineers"
           className="w-full h-full object-cover"
           priority
         />

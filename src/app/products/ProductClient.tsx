@@ -43,7 +43,7 @@ const Products = () => {
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100">
         <div className="flex flex-col items-center justify-center min-h-screen">
           <div className="relative">
-            <div className="w-16 h-16 border-4 border-blue-200 border-t-orange-600 rounded-full animate-spin"></div>
+            <div className="w-16 h-16 border-4 border-blue-200 border-t-[#B71C1C] rounded-full animate-spin"></div>
           </div>
           <p className="mt-4 text-lg font-medium text-gray-600">
             Loading products...
@@ -67,45 +67,43 @@ const Products = () => {
   return (
     <>
       <div className="min-h-auto pb-32 text-white">
-        <div className="relative py-10 md:py-24 overflow-hidden bg-gradient-to-br from-orange-100 via-orange-200 to-orange-300">
-          <div className="absolute top-0 left-0 text-8xl text-orange-500/20 -translate-x-5 -translate-y-5">
+        <div className="relative py-10 md:py-24 overflow-hidden bg-gray-800">
+          <div className="absolute top-0 left-0 text-8xl text-white/20 -translate-x-5 -translate-y-5">
             <FaGear />
           </div>
-          <div className="absolute bottom-0 right-0 text-9xl text-red-500/20">
+          <div className="absolute bottom-0 right-0 text-9xl text-white/20">
             <GiGears />
           </div>
-          <div className="absolute top-10 right-0 text-2xl text-red-500/40">
+          <div className="absolute top-10 right-0 text-2xl text-white/40">
             <Sparkles />
           </div>
-          <div className="absolute  bottom-20  left-10 text-red-500/20 animate-pulse">
+          <div className="absolute  bottom-20  left-10 text-white/20 animate-pulse">
             <Sparkles className="w-10 h-10 text-5xl rotate-6" />
           </div>
 
           <div className="relative z-10 max-w-6xl mx-auto text-center px-6">
             <motion.h1
-              className="text-2xl md:text-5xl text-gray-800  mb-6 drop-shadow-lg"
+              className="text-2xl md:text-5xl text-white font-oswald  mb-6 drop-shadow-lg"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Explore Our{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
-                Automotive Components
-              </span>
+              Explore Our Automotive Components
+              
             </motion.h1>
 
             <motion.p
-              className="md:text-xl text-gray-700 mb-12 max-w-3xl mx-auto font-extralight leading-relaxed text-justify md:text-center"
+              className="md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto font-extralight leading-relaxed text-justify md:text-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
               Discover a wide range of{" "}
-              <span className="font-semibold text-gray-800">
+              <span className="font-semibold text-gray-100">
                 precision-engineered automotive components
               </span>{" "}
               designed for durability, performance, and reliability. Browse our{" "}
-              <span className="font-semibold text-gray-800">
+              <span className="font-semibold text-gray-100">
                 custom solutions
               </span>{" "}
               to find the perfect fit for your automotive projects.
@@ -114,9 +112,9 @@ const Products = () => {
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12">
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="flex items-center space-x-4 bg-white backdrop-blur-md px-6 py-3 rounded-xl border border-orange-400 shadow-lg cursor-pointer transition"
+                className="flex items-center space-x-4 bg-white backdrop-blur-md px-6 py-3 rounded shadow-lg cursor-pointer transition"
               >
-                <span className="w-10 h-10 text-white bg-gradient-to-br from-orange-500 to-red-500 rounded-full p-2 flex items-center justify-center">
+                <span className="w-10 h-10 text-white bg-[#B71C1C] rounded-full p-2 flex items-center justify-center">
                   <PhoneCall className="w-6 h-6" />
                 </span>
               <div>
@@ -132,9 +130,9 @@ const Products = () => {
 
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="flex items-center space-x-4 bg-white backdrop-blur-md px-6 py-3 rounded-xl border border-orange-400 shadow-lg cursor-pointer transition"
+                className="flex items-center space-x-4 bg-white backdrop-blur-md px-6 py-3 rounded shadow-lg cursor-pointer transition"
               >
-                <span className="w-10 h-10 text-white bg-gradient-to-br from-orange-500 to-red-500 rounded-full p-2 flex items-center justify-center">
+                <span className="w-10 h-10 text-white bg-[#B71C1C] rounded-full p-2 flex items-center justify-center">
                   <Mails className="w-6 h-6" />
                 </span>
                 <div className="text-start">
@@ -157,7 +155,7 @@ const Products = () => {
                 <motion.div
                   key={product._id}
                   onClick={() => setSelectedProduct(product)}
-                  className="cursor-pointer group relative rounded-2xl border-2 border-orange-200 bg-white shadow-md overflow-hidden flex flex-col transform transition-all duration-500 hover:shadow-2xl"
+                  className="cursor-pointer group relative rounded border-2 border-[#C40C0C]/20 bg-white shadow-md overflow-hidden flex flex-col transform transition-all duration-500 hover:shadow-2xl"
                   variants={cardVariants}
                   initial="hidden"
                   animate="visible"
@@ -178,12 +176,12 @@ const Products = () => {
                     )}
                   </div>
                   <div className="relative w-full h-2 flex items-center">
-                    <div className="w-1/2 h-0.5 bg-gradient-to-r from-orange-400 to-transparent"></div>
-                    <div className="w-1/2 h-0.5 bg-gradient-to-l from-orange-400 to-transparent"></div>
+                    <div className="w-1/2 h-0.5 bg-gradient-to-r from-[#C40C0C]/20 to-transparent"></div>
+                    <div className="w-1/2 h-0.5 bg-gradient-to-l from-[#C40C0C]/20 to-transparent"></div>
                   </div>
 
                   <div className="flex-1 flex flex-col p-2 pt-3 relative z-10">
-                    <h3 className="text-lg font-extrabold text-gray-800 text-center mb-3">
+                    <h3 className="text-lg 2xl:text-xl font-semibold font-oswald text-gray-900 text-center mb-3">
                       {product.productName}
                     </h3>
                   </div>
@@ -205,7 +203,7 @@ const Products = () => {
               onClick={() => setSelectedProduct(null)}
             >
               <motion.div
-                className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-6"
+                className="relative bg-white rounded shadow-2xl max-w-2xl w-full p-6"
                 onClick={(e) => e.stopPropagation()}
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -218,6 +216,9 @@ const Products = () => {
                 >
                   <X size={24} />
                 </button>
+                   <h2 className="text-2xl font-bold font-oswald text-center text-gray-800">
+                  {selectedProduct.productName}
+                </h2>
 
                 {selectedProduct.productImage &&
                 selectedProduct.productImage.length > 0 ? (
@@ -235,19 +236,15 @@ const Products = () => {
                   </div>
                 )}
 
-                <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-                  {selectedProduct.productName}
-                </h2>
-
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <span
-                    className="flex items-center gap-2 px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg shadow hover:bg-orange-700 transition"
+                    className="flex items-center gap-2 px-6 py-3 bg-[#1F5A8B] text-white font-semibold rounded shadow transition"
                   >
                     <PhoneCall /> +91 9841706116 <br />+91 9701946123
                   </span>
 
                   <span
-                    className="flex items-center gap-2 px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow hover:bg-black transition"
+                    className="flex items-center gap-2 px-6 py-3 bg-gray-800 text-white font-semibold rounded shadow hover:bg-black transition"
                   >
                     <Mails />abishek@infantengineers.in <br /> rajasekaran@infantengineers.in
                   </span>

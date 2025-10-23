@@ -57,7 +57,7 @@ const ClientsList = () => {
           </h1>
           <button
             onClick={() => router.push("/admin/clientslist/upload")}
-            className="inline-flex items-center gap-2 px-6 py-3 text-orange-600 border rounded font-semibold shadow-md hover:shadow-lg transition-transform transform hover:-translate-y-1"
+            className="inline-flex items-center gap-2 px-6 py-3 text-[#B71C1C] border rounded font-semibold shadow-md hover:shadow-lg transition-transform transform hover:-translate-y-1"
           >
             Add New Client
           </button>
@@ -65,7 +65,7 @@ const ClientsList = () => {
 
         {loading ? (
           <div className="flex flex-col items-center justify-center min-h-[50vh]">
-            <div className="w-16 h-16 border-4 border-blue-200 border-t-orange-600 rounded-full animate-spin"></div>
+            <div className="w-16 h-16 border-4 border-blue-200 border-t-[#B71C1C] rounded-full animate-spin"></div>
             <p className="mt-4 text-lg font-medium text-gray-600">
               Loading clients...
             </p>

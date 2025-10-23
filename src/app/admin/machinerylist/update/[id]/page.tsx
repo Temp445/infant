@@ -85,7 +85,7 @@ const MachineryUpdate = () => {
       <div className="flex-1 p-6 lg:p-12">
         <form
           onSubmit={handleSubmit}
-          className="max-w-3xl mx-auto bg-white border border-orange-200 shadow-lg rounded-2xl p-8 space-y-8"
+          className="max-w-3xl mx-auto bg-white border border-gray-200 shadow-lg rounded-2xl p-8 space-y-8"
         >
           <h2 className="text-3xl font-bold text-gray-800 text-center">
             Update Machinery
@@ -99,7 +99,7 @@ const MachineryUpdate = () => {
               type="text"
               value={machineryName}
               onChange={(e) => setMachineryName(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-500 focus:outline-none"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#1F5A8B] focus:outline-none"
               placeholder="Enter machinery name"
               required
             />

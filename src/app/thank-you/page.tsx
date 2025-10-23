@@ -4,10 +4,10 @@ import Link from "next/link";
 
 const ThankYouPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-50 flex items-center justify-center p-4 overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center p-4 overflow-hidden">
       <div className="relative w-full max-w-lg transform transition-all duration-1000">
-        <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-orange-100">
-          <div className="h-2 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600"></div>
+        <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-300">
+          <div className="h-2 bg-[#1F5A8B]"></div>
 
           <div className="px-6 md:px-8 py-10 md:py-12">
             <div className="flex justify-center mb-6">
@@ -17,16 +17,16 @@ const ThankYouPage = () => {
               </div>
             </div>
 
-            <h2 className="text-3xl md:text-4xl text-center font-bold bg-gradient-to-r from-gray-800 to-orange-600 bg-clip-text text-transparent mb-3">
+            <h2 className="text-3xl md:text-4xl text-center font-bold bg-gradient-to-r from-gray-800 to-[#B71C1C] bg-clip-text text-transparent mb-3">
               Thank You!
             </h2>
 
             <div className="flex items-center justify-center gap-2 mb-6">
-              <Sparkles className="w-4 h-4 text-orange-500" />
+              <Sparkles className="w-4 h-4 text-[#1F5A8B]" />
               <p className="text-gray-600 text-sm font-medium">
                 We're excited to connect with you
               </p>
-              <Sparkles className="w-4 h-4 text-orange-500" />
+              <Sparkles className="w-4 h-4 text-[#1F5A8B]" />
             </div>
 
             <p className="text-gray-600 text-sm md:text-base text-center mb-8 leading-relaxed">
@@ -35,12 +35,12 @@ const ThankYouPage = () => {
               you need.
             </p>
 
-            <div className="w-full h-px bg-gradient-to-r from-transparent via-orange-200 to-transparent my-6"></div>
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-[#1F5A8B] to-transparent my-6"></div>
 
             <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-orange-50 transition-colors cursor-pointer group">
-                <div className="p-2 bg-orange-100 rounded-lg group-hover:bg-orange-200 transition-colors">
-                  <Phone className="w-5 h-5 text-orange-500" />
+              <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#1F5A8B]/10 transition-colors cursor-pointer group">
+                <div className="p-2 bg-[#1F5A8B]/10 rounded-lg group-hover:bg-[#1F5A8B]/20 transition-colors">
+                  <Phone className="w-5 h-5 text-[#1F5A8B]" />
                 </div>
                 <div className="flex flex-col">
                   <a href="tel:+919701946123" className="text-gray-700 font-medium">
@@ -52,9 +52,9 @@ const ThankYouPage = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-orange-50 transition-colors cursor-pointer group">
-                <div className="p-2 bg-orange-100 rounded-lg group-hover:bg-orange-200 transition-colors">
-                  <Mail className="w-5 h-5 text-orange-500" />
+              <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-[#1F5A8B]/10 transition-colors cursor-pointer group">
+                <div className="p-2 bg-[#1F5A8B]/10 rounded-lg group-hover:bg-[#1F5A8B]/20 transition-colors">
+                  <Mail className="w-5 h-5 text-[#1F5A8B]" />
                 </div>
                 <div>
                   <a
@@ -76,14 +76,14 @@ const ThankYouPage = () => {
 
             <Link
               href="/"
-              className="block w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold py-3 rounded-xl shadow-lg hover:shadow-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 text-center"
+              className="block w-full bg-[#1F5A8B] text-white font-semibold py-3 rounded-xl shadow-lg hover:shadow-xl hover:bg-emerald-600 transition-all duration-300 transform hover:scale-105 text-center"
             >
               Back to Home
             </Link>
           </div>
         </div>
 
-        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 blur-xl group-hover:opacity-100 transition-opacity pointer-events-none -z-10"></div>
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#1F5A8B]/10 to-transparent opacity-0 blur-xl group-hover:opacity-100 transition-opacity pointer-events-none -z-10"></div>
       </div>
     </div>
   );

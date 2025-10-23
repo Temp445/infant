@@ -50,7 +50,7 @@ const TeamSection = () => {
           className="text-center mb-10 md:mb-20"
         >
           <h3 className="text-2xl md:text-3xl font-black mb-6 text-center mx-auto leading-tight">
-            <span className=" text-white">Leadership Excellence </span>
+            <span className=" text-white font-oswald">Leadership Excellence </span>
           </h3>
 
           <p className="text-gray-300 md:text-xl max-w-3xl mx-auto leading-relaxed">
@@ -69,26 +69,26 @@ const TeamSection = () => {
               transition={{ duration: 0.8, delay: idx * 0.2 }}
               className="group relative"
             >
-              <div className="relative bg-white backdrop-blur-xl rounded-3xl p-5 border border-gray-700/50 hover:border-orange-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-500/20">
+              <div className="relative bg-white backdrop-blur-xl rounded p-5 border border-gray-700/50 transition-all duration-500 hover:shadow-2xl">
                 <div className="flex justify-between items-center mb-8">
                   <div className="flex gap-2 items-center justify-center">
                     <div className="text-center">
-                      <div className="text-2xl md:text-3xl font-black text-orange-500">
+                      <div className="text-2xl md:text-3xl font-black text-[#1F5A8B]">
                         {leader.years}
                       </div>
                       <div className="text-xs text-gray-400 uppercase tracking-wider">
                         Years Exp.
                       </div>
                     </div>
-                    <div className="w-px h-12 bg-gradient-to-b from-orange-500/50 to-red-500/50"></div>
+                    <div className="w-px h-12 bg-[#1F5A8B]/50"></div>
                     <div className="text-center">
                       <div className="text-lg font-bold text-gray-800">
                         {leader.position}
                       </div>
                     </div>
                   </div>
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500/20 to-red-500/20 md:flex items-center justify-center hidden">
-                    <div className="text-3xl text-orange-600">
+                  <div className="w-16 h-16 rounded-full bg-[#1F5A8B]/20 md:flex items-center justify-center hidden">
+                    <div className="text-3xl text-[#1F5A8B]">
                       <MdVerified />{" "}
                     </div>
                   </div>
@@ -96,7 +96,7 @@ const TeamSection = () => {
 
                 <div className="grid md:grid-cols-1 xl:grid-cols-2 gap-4 items-center">
                   <div className="relative">
-                    <div className="relative overflow-hidden rounded-2xl">
+                    <div className="relative overflow-hidden rounded">
                       <Image
                         src={leader.image}
                         alt={leader.name}
@@ -112,7 +112,7 @@ const TeamSection = () => {
                       <h3 className="text-2xl md:text-2xl lg:text-xl font-bold  text-gray-900 mb-2">
                         {leader.name}
                       </h3>
-                      <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+                      <div className="w-16 h-1 bg-[#1F5A8B] rounded-full"></div>
                     </div>
 
                     <p className="text-gray-700 leading-relaxed text-sm xl:text-xs 2xl:text-sm">
@@ -133,15 +133,14 @@ const TeamSection = () => {
           className="relative"
         >
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-black text-white mb-4">
+            <h2 className="text-2xl md:text-3xl font-semibold font-oswald text-white mb-4">
               Complete Leadership Team
             </h2>
             <div className="w-24 h-1 bg-white mx-auto rounded-full"></div>
           </div>
 
           <div className="relative group cursor-pointer">
-            <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl overflow-hidden backdrop-blur-xl border border-gray-700/50">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-red-500/10 to-orange-500/10"></div>
+            <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded overflow-hidden backdrop-blur-xl border border-gray-700/50">
               <Image
                 src={Team}
                 alt="Complete Leadership Team"

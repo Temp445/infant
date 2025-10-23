@@ -105,8 +105,8 @@ export default function Navbar() {
                        onClick={item.onClick}
                        className={classNames(
                          'px-4 py-2 text-sm font-medium rounded-md transition-all duration-300',
-                         'text-gray-700 hover:bg-orange-500 hover:text-white hover:scale-105 -mt-1  px-4',
-                         item.name !== "Logout" ? 'bg-orange-600 text-white font-semibold' : ''
+                         'text-gray-700 hover:bg-[#B71C1C]/70 hover:text-white hover:scale-105 -mt-1  px-4',
+                         item.name !== "Logout" ? 'bg-[#B71C1C] text-white font-semibold' : ''
                        )}
                      >
                        {item.name}
@@ -120,8 +120,8 @@ export default function Navbar() {
                        className={classNames(
                          'relative px-3 py-1.5 text-sm font-medium transition-all duration-300',
                          isActive
-                            ? 'bg-orange-600 text-white font-semibold rounded'
-                            : 'text-gray-700 hover:text-white hover:bg-orange-500 rounded'
+                            ? 'bg-[#B71C1C] text-white font-semibold rounded'
+                            : 'text-gray-700 hover:text-white hover:bg-[#B71C1C]/70 rounded'
                        )}
                      >
                        {item.name}
@@ -134,7 +134,7 @@ export default function Navbar() {
 
               {/* Mobile menu*/}
               <div className="flex items-center lg:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-500 hover:bg-gray-100 hover:text-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 transition-colors duration-200">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-500 hover:bg-gray-100 hover:text-[#B71C1C] focus:outline-none focus:ring-2 focus:ring-[#B71C1C] transition-colors duration-200">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -157,7 +157,7 @@ export default function Navbar() {
           onClick={item.onClick}
           className={classNames(
             'block w-full text-left rounded-lg px-4 py-3 text-base font-medium transition-all duration-200',
-            'text-gray-700 hover:text-orange-600 hover:bg-orange-50'
+            'text-gray-700 hover:text-[#B71C1C] hover:bg-[#B71C1C]/10'
           )}
         >
           {item.name}
@@ -169,8 +169,8 @@ export default function Navbar() {
           className={classNames(
             'block rounded-lg px-4 py-3 text-base font-medium transition-all duration-200',
             isActive 
-              ? 'text-orange-600 font-semibold bg-orange-50 border-l-4 border-orange-600' 
-              : 'text-gray-700 hover:text-orange-600 hover:bg-orange-50'
+              ? 'text-[#B71C1C] font-semibold bg-[#B71C1C]/10 border-l-4 border-[#B71C1C]' 
+              : 'text-gray-700 hover:text-[#B71C1C] hover:bg-[#B71C1C]/10'
           )}
         >
           {item.name}

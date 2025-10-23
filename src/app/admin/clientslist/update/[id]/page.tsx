@@ -99,7 +99,7 @@ const ClientUpdate = () => {
               type="text"
               value={clientName}
               onChange={(e) => setClientName(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-500 focus:outline-none"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#1F5A8B] focus:outline-none"
               placeholder="Enter client name"
               required
             />
@@ -114,7 +114,7 @@ const ClientUpdate = () => {
                 {existingImages.map((img, idx) => (
                   <div
                     key={idx}
-                    className="relative group cursor-pointer rounded-lg overflow-hidden border hover:ring-2 hover:ring-orange-500 transition"
+                    className="relative group cursor-pointer rounded-lg overflow-hidden border hover:ring-2 hover:ring-[#1F5A8B] transition"
                     onClick={() => handleReplaceClick(idx)}
                   >
                     <img
@@ -142,7 +142,7 @@ const ClientUpdate = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-orange-600 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 transition"
+            className="w-full bg-[#1F5A8B] text-white py-3 rounded-lg font-semibold hover:bg-emerald-600 transition"
           >
             {loading ? "Updating..." : "Update Client"}
           </button>

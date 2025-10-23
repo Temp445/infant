@@ -34,8 +34,8 @@ const Machine = () => {
     }, []);
   return (
     <section className="py-5 md:py-20 container mx-auto">
-      <h2 className="text-2xl md:text-4xl font-bold md:px-4 lg:px-12 mb-14 text-gray-900 text-center md:text-left">
-      Machinery <span className="text-transparent bg-clip-text bg-gradient-to-br from-orange-500 to-red-500">We Use</span>
+      <h2 className="text-2xl md:text-4xl font-semibold font-oswald md:px-4 lg:px-12 mb-14 text-gray-900 text-center md:text-left">
+      Machinery We Use
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:px-12 mx-auto px-6">
@@ -44,7 +44,7 @@ const Machine = () => {
             key={index}
             className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200 
                        bg-white transition-all duration-500 transform 
-                       hover:-translate-y-3 hover:shadow-2xl hover:border-orange-400 group"
+                       hover:-translate-y-3 hover:shadow-2xl hover:border-[#1F5A8B] group"
           >
             <div className="relative h-56 md:h-80 w-full overflow-hidden">
               <img
@@ -54,7 +54,7 @@ const Machine = () => {
               />
             </div>
 
-            <div className="p-3 text-center relative bg-gradient-to-r from-orange-500 to-orange-600">
+            <div className="p-3 text-center relative bg-[#1F5A8B]">
               <h3 className="text-lg font-semibold text-white tracking-wide group-hover:scale-105 transition-transform duration-300">
                 {machine.machineryName}
               </h3>

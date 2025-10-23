@@ -44,7 +44,7 @@ const TestimonialsList = () => {
           <h2 className="text-3xl font-bold text-gray-800">Testimonials</h2>
           <button
             onClick={() => router.push("/admin/testimonialslist/upload")}
-            className="flex items-center gap-2 text-orange-600 font-bold border px-4 py-2 rounded shadow-md transition"
+            className="flex items-center gap-2 text-[#B71C1C] font-bold border px-4 py-2 rounded shadow-md transition"
           >
             Add Testimonial
           </button>
@@ -52,7 +52,7 @@ const TestimonialsList = () => {
 
         {loading ? (
           <div className="flex flex-col items-center justify-center min-h-[50vh]">
-            <div className="w-16 h-16 border-4 border-blue-200 border-t-orange-600 rounded-full animate-spin"></div>
+            <div className="w-16 h-16 border-4 border-blue-200 border-t-[#B71C1C] rounded-full animate-spin"></div>
           </div>
         ) : (
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -61,7 +61,7 @@ const TestimonialsList = () => {
                 key={t._id}
                 className="relative bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
               >
-                <div className="absolute -top-4 -left-4 bg-orange-500 text-white p-3 rounded-full shadow-md">
+                <div className="absolute -top-4 -left-4 bg-[#1F5A8B] text-white p-3 rounded-full shadow-md">
                   <Quote className="w-5 h-5" />
                 </div>
 

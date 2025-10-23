@@ -82,7 +82,7 @@ const Login = () => {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-green-500"
+            className="w-full bg-[#1F5A8B] text-white py-2 rounded-lg hover:bg-green-500"
           >
             {isLoading ? 'Login...' : 'Login'}
           </button>
@@ -90,7 +90,7 @@ const Login = () => {
         </form>
          <p className="text-center text-sm mt-4 text-gray-600">
           Don't have an account?{' '}
-          <Link href="/register" className="text-orange-600 hover:underline">
+          <Link href="/register" className="text-[#1F5A8B] hover:underline">
             Register
           </Link>
         </p>

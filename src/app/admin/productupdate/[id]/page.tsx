@@ -85,7 +85,7 @@ const ProductUpdate = () => {
       <div className="flex-1 bg-gray-50 py-10">
         <form
           onSubmit={handleSubmit}
-          className="max-w-3xl mx-auto p-8 bg-white border border-orange-200 shadow-lg rounded-2xl space-y-8"
+          className="max-w-3xl mx-auto p-8 bg-white border border-gray-200 shadow-lg rounded-2xl space-y-8"
         >
           <h2 className="text-3xl font-bold text-gray-800 text-center">
             Update Product
@@ -99,7 +99,7 @@ const ProductUpdate = () => {
               type="text"
               value={productName}
               onChange={(e) => setProductName(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-500 focus:outline-none"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#1F5A8B] focus:outline-none"
               placeholder="Enter product name"
               required
             />
@@ -137,7 +137,7 @@ const ProductUpdate = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-orange-600 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 transition"
+            className="w-full bg-[#1F5A8B] text-white py-3 rounded-lg font-semibold hover:bg-emerald-700 transition"
           >
             {loading ? "Updating..." : "Update Product"}
           </button>
